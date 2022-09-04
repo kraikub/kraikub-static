@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "out",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ],
+    "ignore": ["**/.*", "**/node_modules/**"],
+    "cleanUrls": true
+  }
+}
