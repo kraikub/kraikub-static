@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Kraikub - Authenticate any KU students.</title>
       </Head>
-      <StaticNavbar transparent/>
+      <StaticNavbar sticky/>
       <HomePage />
       <Footer />
     </>

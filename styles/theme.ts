@@ -42,9 +42,9 @@ export const colors = {
 };
 
 const fonts = {
-  body: `'Manrope', 'Noto Sans Thai', sans-serif`,
-  heading: `'Manrope', 'Noto Sans Thai', sans-serif`,
-};
+  body: `'Manrope','Noto Sans Thai',sans-serif`,
+  heading: `'Manrope','Noto Sans Thai',sans-serif`,
+};;
 
 const components = {
   Text: {

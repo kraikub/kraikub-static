@@ -15,12 +15,12 @@ import {
 } from "@chakra-ui/react";
 import { FC, useState } from "react";
 import { useRouter } from "next/router";
-import bg from "../../../public/bg-2.png";
-import bgx from "../../../public/bg-1.png";
+import bg from "../../../public/bg-8.png";
 import dataProtection from "../../../public/data-protection.png";
 import anonymous from "../../../public/anonymous.png";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const codeString = `const myapp = createInstance({
   clientId: "<clientId>",
@@ -51,31 +51,43 @@ const HomePage: FC = () => {
         bgSize="cover"
         borderRadius="0 0 28px 28px"
       >
-        <Container maxW="container.xl" py="24vh" position="relative" h="full">
-          <Box textAlign="center">
-            <Heading fontSize="3rem">Build your KU app with kraikub</Heading>
-            <Text fontWeight={600} fontSize={26} my={6}>
-              Kraikub is a software development platform for KU.
+        <Container
+          maxW="container.xl"
+          py="14vh"
+          position="relative"
+          h="full"
+          color="white"
+        >
+          <Box textAlign="start">
+            <Heading fontSize="3rem">
+              แพลทฟอร์มสำหรับพัฒนาแอปพลิเคชันแห่งแรกใน KU
+            </Heading>
+            <Text fontWeight={500} fontSize={20} my={6} maxW={800}>
+              Kraikub (ใครคับ) คือแพลทฟอร์มที่ให้บริการด้านระบบยืนยันตัวตน และ
+              ข้อมูลต่างๆ สำหรับ developers ในมหาวิทยาลัยเกษตรศาสตร์
             </Text>
             <ButtonGroup my={8} flexWrap="wrap" gap={4}>
               <Button
                 size="lg"
-                bg="black"
-                color="white"
-                rounded="full"
+                h="60px"
+                bg="white"
+                color="black"
                 _hover={{ bg: undefined }}
-                onClick={() => router.push("https://app.kraikub.com/projects/manager")}
+                onClick={() =>
+                  router.push("https://app.kraikub.com/projects/manager")
+                }
+                gap={2}
               >
-                Try now
+                ทดลองใช้ <ArrowForwardIcon />
               </Button>
               <Button
                 size="lg"
-                bg="#00000010"
-                color="black"
-                rounded="full"
-                _hover={{ bg: "#00000030" }}
+                variant="ghost"
+                color="white"
+                _hover={{ bg: "#ffffff30" }}
+                h="60px"
               >
-                How it works ?
+                Kraikub คืออะไร?
               </Button>
             </ButtonGroup>
           </Box>
@@ -85,19 +97,14 @@ const HomePage: FC = () => {
                 px={10}
                 py={3}
                 mb={8}
-                // bgImage={bgx.src}
-                // bgSize="cover"
-                // bgPos="center"
-                // color="white"
-                bg="gray.800"
+                bg="gray.700"
                 color="white"
-                boxShadow="10px 10px 0px #FFBA3C, -10px -10px 0px #0A7142"
                 rounded={4}
                 fontSize={18}
-                fontWeight={600}
+                fontWeight={500}
                 fontFamily="'Roboto Mono', monospace"
               >
-                npm install kraikub
+                npm i @kraikub/sdk --save
               </Box>
               <Text textAlign="center" fontWeight={600} fontSize={16}>
                 Proudly made for Developers.
@@ -117,7 +124,13 @@ const HomePage: FC = () => {
             Key Features
           </Heading>
           <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} my={16} gap={6}>
-            <VStack spacing={16} boxShadow="0 0 10px #00000020" px={6} py={8} rounded={10}>
+            <VStack
+              spacing={16}
+              boxShadow="0 0 10px #00000020"
+              px={6}
+              py={8}
+              rounded={10}
+            >
               <VStack>
                 <Heading {...headerBaseStyles} size="md">
                   Users Authentication
@@ -140,8 +153,8 @@ const HomePage: FC = () => {
                     Available
                   </Badge>
                 </Box>
-                We provide authentication service that help developers to
-                identify their users identity with Kasetsart University.
+                เรามีบริการยืนยันตัวตนของผู้ใช้งานแอปพลิเคชันของคุณไว้ว่าจะเป็นนิสิตหรือบุคคลากรให้มหาวิทยาลัยเกษตรศาสตร์
+                ช่วยให้คุณสามารถระบุตัวตนของผู้ที่กำลังใช้งานแอปพลิเคชันของคุณได้อย่างง่ายดาย
               </Box>
             </VStack>
             <VStack
@@ -153,7 +166,7 @@ const HomePage: FC = () => {
               position="relative"
             >
               <Heading {...headerBaseStyles} size="md">
-                Students API
+                StudentAPI
               </Heading>
               <Box h="80px">
                 <Image src={dataProtection.src} alt="data-icon" h="60px" />
@@ -164,15 +177,20 @@ const HomePage: FC = () => {
                     Coming Soon
                   </Badge>
                 </Box>
-                Students API is an interface which help developers to request
-                student’s data from Kasetsart API easily. Students API{" "}
+                StudentAPI คือ API
+                สาธารณะที่เปิดโอกาสให้นิสิตให้มหาวิทยาลัยเกษตรศาสตร์สามารถเข้าถึงแหล่งข้อมูลที่เป็นประโยชน์เพื่อนำไปต่อยอดเป็นสิ่งต่างๆได้
                 <Box as="span" color="katrade.main" fontWeight={700}>
-                  protect your sensitive data, personal data
+                  ฟรี
                 </Box>{" "}
-                and let you customize how apps can access your personal data.
               </Box>
             </VStack>
-            <VStack spacing={16} boxShadow="0 0 10px #00000020" px={6} py={8} rounded={10}>
+            <VStack
+              spacing={16}
+              boxShadow="0 0 10px #00000020"
+              px={6}
+              py={8}
+              rounded={10}
+            >
               <Heading {...headerBaseStyles} size="md">
                 Anonymous Sign in
               </Heading>
@@ -181,23 +199,35 @@ const HomePage: FC = () => {
               </Box>
               <Box color="#00000090" maxW={300} fontWeight={500}>
                 <Box mb={4}>
-                  <Badge colorScheme="orange" rounded={6}>
-                    Coming Soon
+                  <Badge colorScheme="green" rounded={6}>
+                    Available
                   </Badge>
                 </Box>
-                Sign in to any app on Kraikub{" "}
-                <Box as="span" color="katrade.main" fontWeight={700}>
-                  with out revealing any of your personal data
-                </Box>
-                {". "}
-                Apps will only know that you are Kasetsart University student,
-                but {"won't"} know who you are.
+                เข้าสู่ระบบด้วยโหมดไร้ตัวตน
+                จะไม่มีการแชร์ข้อมูลส่วนบุคคลระหว่างผู้ใช้งานและแอปพลิเคชั่นที่มีตัวเลือกการเข้าสู่ระบบแบบไร้ตัวตนทั้งสิ้น
+                มีเพียง ID
+                ที่ของผู้ใช้งานที่ไม่สามารถอ้างอิงข้อมูลส่วนบุคคลของผู้ใช้งานคนนั้นได้
               </Box>
             </VStack>
           </SimpleGrid>
 
           <Box my="100px">
-            <Heading>Sign in with less than 10 lines of code.</Heading>
+            <Heading>
+              ใช้ Sign in with KU{" "}
+              <Box as="span" color="red.400">
+                ด้วยโค้ดไม่ถึง{" "}
+                <Box as="span" fontSize={55} fontWeight={800}>
+                  10
+                </Box>{" "}
+                บรรทัด
+              </Box>
+            </Heading>
+            <Box my="20px">
+              <Text fontSize={16}>
+                เรามี Kraikub SDK ที่สามารถลดเวลาการเขียนโค้ดของคุณลงไปได้ถึง
+                70%
+              </Text>
+            </Box>
             <Box my="40px">
               <SyntaxHighlighter
                 language="javascript"
@@ -206,25 +236,31 @@ const HomePage: FC = () => {
               >
                 {codeString}
               </SyntaxHighlighter>
-              <ButtonGroup my="20px" gap={3} flexWrap="wrap">
+              <ButtonGroup
+                my="20px"
+                gap={[0, 3, 3]}
+                spacing={0}
+                flexWrap="wrap"
+                display={["block", "flex", "flex"]}
+              >
                 <Button
+                  mb={2}
                   size="lg"
-                  rounded="full"
                   bg="black"
                   _hover={{ bg: undefined }}
                   color="white"
                   w={["100%", "auto", "auto"]}
                 >
-                  Start now
+                  เริ่มใช้เลย!
                 </Button>
                 <a href="https://demo.kraikub.com">
-                  <Button size="lg" rounded="full" w={["full", "auto", "auto"]}>
-                    Demo
+                  <Button size="lg" w={["100%", "auto", "auto"]} mb={2}>
+                    ตัวอย่างแอปที่ใช้ Kraikub SDK
                   </Button>
                 </a>
                 <a href="https://docs.kraikub.com">
-                  <Button size="lg" rounded="full" w={["full", "auto", "auto"]}>
-                    Documentation
+                  <Button size="lg" w={["100%", "auto", "auto"]} mb={2}>
+                    SDK Docs
                   </Button>
                 </a>
               </ButtonGroup>
@@ -233,15 +269,26 @@ const HomePage: FC = () => {
 
           <VStack my="200px" gap={6}>
             <Heading {...headerBaseStyles} textAlign="center">
-              Unlock your{" "}
+              เรามอบพลังวิเศษ{" "}
               <Box as="span" color="katrade.main" fontWeight={700}>
-                ideas
+                ให้กับคุณ
               </Box>
             </Heading>
             <Text fontSize={20} fontWeight={500} maxW={560} textAlign="center">
-              Kraikub let you create applications a lot easier. Sign up now, and
-              make KU better.
+              เราสร้างเครื่องมือที่ดีที่สุด เพื่อให้คุณนำไปสร้างสิ่งที่ดีที่สุด
             </Text>
+            <a href="https://app.kraikub.com/projects/manager">
+              <Button
+                mb={2}
+                size="lg"
+                bg="black"
+                _hover={{ bg: undefined }}
+                color="white"
+                w={["100%", "auto", "auto"]}
+              >
+                เริ่มใช้เลย!
+              </Button>
+            </a>
           </VStack>
         </Container>
       </Box>
