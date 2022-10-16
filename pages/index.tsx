@@ -1,9 +1,7 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
-import Footer from "../src/layouts/Footer";
-import StaticNavbar from "../src/layouts/StaticNavbar";
-import HomePage from "../src/views/home";
-
+import { StaticNavbar } from "../src/layouts/StaticNavbar";
+import { HomePage } from "../src/views/home";
 
 const Home: NextPage = () => {
   return (
@@ -11,9 +9,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Kraikub - Authenticate any KU students.</title>
       </Head>
-      <StaticNavbar sticky/>
+      <StaticNavbar />
       <HomePage />
-      <Footer />
     </>
   );
 };

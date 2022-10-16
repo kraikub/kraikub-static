@@ -1,53 +1,34 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Divider,
-  Flex,
-  Heading,
-  IconButton,
-  Image,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-} from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import { FC } from "react";
-import logo from "../../public/logo.png";
+import { Box, Collapse, Typography } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 
-interface StaticNavbarProps {
-  sticky?: boolean;
-  transparent?: boolean;
-}
+export const StaticNavbar = () => {
+  const [show, setShow] = useState<boolean>(true);
 
-const StaticNavbar: FC<StaticNavbarProps> = ({ sticky, transparent }) => {
-  const router = useRouter()
   return (
-    <Flex
-      position={sticky ? "sticky" : "absolute"}
-      top={0}
-      left={0}
-      right={0}
-      py="12px"
-      bg={transparent ? "transparent" : "white"}
-      zIndex={35}
-      boxShadow={sticky ? "0 10px 10px #00000010" : "none"}
-      px="20px"
-      minH="70px"
-      alignItems="center"
-      justifyContent="space-between"
-    >
-      <Flex alignItems="center" gap={3} onClick={() => router.push('/')} cursor="pointer">
-        <Image src={logo.src} h="26px" alt="logo" />
-        <Heading size="md" fontWeight={700} color="black">
-          kraikub{" "}
-        </Heading>
-      </Flex>
-    </Flex>
+      <Box
+        sx={{
+          backgroundColor: "white",
+          position: "sticky",
+          top: 0,
+          left: 0,
+          right: 0,
+          minHeight: "70px",
+          height: "70px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          paddingX: "20px",
+          boxShadow: "0 2px 4px 2px #00000020",
+          zIndex: 100,
+        }}
+      >
+        <Typography
+          fontFamily={`'Manrope', sans-serif`}
+          fontSize={20}
+          fontWeight={500}
+        >
+          kraikub
+        </Typography>
+      </Box>
   );
 };
-export default StaticNavbar;
