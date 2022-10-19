@@ -1,0 +1,52 @@
+.leftelement {
+  animation: 1s ease left-element-animation;
+}
+
+.rightelement {
+  animation-delay: 2s;
+  animation: 2s ease right-element-animation;
+}
+.opacityanimation {
+  animation: 1.2s ease opacity-animation;
+}
+
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes left-element-animation {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes right-element-animation {
+  0% {
+    transform: translateY(-100%);
+    transform: scaleY(-1);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

@@ -1,5 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { NextPage } from "next";
+import { KraikubLogo } from "../../components/svg/KraikubLogo";
+import { Strip } from "../../components/svg/Strip";
 import { DevelopersBanner } from "./components/DevelopersBanner";
 import { ManageBanner } from "./components/ManageBanner";
 import { NontsriAccountBanner } from "./components/NonsriAccountBanner";
@@ -18,35 +20,24 @@ export const HomePage: NextPage = () => {
             textAlign: "center",
           }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              fontSize: {
-                xs: 24,
-                sm: 30,
-                md: 36,
-                lg: 40,
-              },
-            }}
-            my={2}
-          >
-            Account รูปแบบใหม่
+          <Typography variant="h3" my={2}>
+            บัญชีเดียว
           </Typography>
-          <Typography
-            variant="h4"
-            sx={{
-              fontSize: {
-                xs: 24,
-                sm: 30,
-                md: 36,
-                lg: 40,
-              },
-            }}
-          >
+          <Typography variant="h3">
             สำหรับนิสิตมหาวิทยาลัยเกษตรศาสตร์
           </Typography>
+          <Box
+            sx={{
+              my: "50px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <KraikubLogo width="260px" />
+          </Box>
         </Box>
       </Container>
+      {/* <Strip width="100%"/> */}
       <ManageBanner />
       <NontsriAccountBanner />
       <DevelopersBanner />

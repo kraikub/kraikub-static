@@ -4,7 +4,7 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#24A870",
+      main: "#3AB96D",
       contrastText: "white",
     },
     secondary: {
@@ -13,9 +13,31 @@ export const lightTheme = createTheme({
       contrastText: "#454545",
     },
   },
+  shape: {
+    borderRadius: 8,
+  },
   typography: {
-    fontFamily: `'Sarabun', sans-serif`,
+    fontFamily: `'Inter', sans-serif`,
     fontSize: 16,
+    h1: {
+      fontWeight: 500,
+      letterSpacing: -1,
+    },
+    h2: {
+      letterSpacing: -2,
+    },
+    h3: {
+      letterSpacing: -2,
+    },
+    h4: {
+      letterSpacing: -1,
+    },
+    h5: {
+      letterSpacing: 0,
+    },
+    h6: {
+      letterSpacing: 0,
+    },
     body1: {
       fontWeight: 300,
       color: "#000000b0",

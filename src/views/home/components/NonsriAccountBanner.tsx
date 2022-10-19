@@ -1,10 +1,11 @@
 import { TypeAnimation } from "react-type-animation";
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { gradients } from "../../../../styles/colors";
 export const NontsriAccountBanner = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#00000005",
+        background: gradients.grey.light,
         paddingY: "40px",
       }}
     >
@@ -20,7 +21,7 @@ export const NontsriAccountBanner = () => {
           }}
         >
           <Box mb={3}>
-            <Typography variant="h5">
+            <Typography variant="h3">
               เริ่มใช้งานได้ทันทีด้วยบัญชีนนทรี
             </Typography>
           </Box>
