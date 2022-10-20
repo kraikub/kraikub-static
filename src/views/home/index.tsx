@@ -5,6 +5,7 @@ import { Strip } from "../../components/svg/Strip";
 import { DevelopersBanner } from "./components/DevelopersBanner";
 import { ManageBanner } from "./components/ManageBanner";
 import { NontsriAccountBanner } from "./components/NonsriAccountBanner";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const HomePage: NextPage = () => {
   return (
@@ -33,12 +34,18 @@ export const HomePage: NextPage = () => {
               justifyContent: "center",
             }}
           >
-            <KraikubLogo width="260px" />
+            <AnimationOnScroll animateIn="animate__zoomIn">
+              <KraikubLogo width="260px" />
+            </AnimationOnScroll>
           </Box>
         </Box>
       </Container>
       {/* <Strip width="100%"/> */}
-      <ManageBanner />
+      
+      <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
+        <ManageBanner />
+      </AnimationOnScroll>
+
       <NontsriAccountBanner />
       <DevelopersBanner />
     </>
