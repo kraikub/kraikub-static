@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { gradients } from "../../../../styles/colors";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import { SimpleFadeIn } from "../../../components/animations/SimpleFadeIn";
 
 export const NontsriAccountBanner = () => {
   return (
@@ -22,7 +22,7 @@ export const NontsriAccountBanner = () => {
             textAlign: "center",
           }}
         >
-          <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce>
+          <SimpleFadeIn>
             <Box mb={3}>
               <Typography variant="h3">
                 เริ่มใช้งานได้ทันทีด้วยบัญชีนนทรี
@@ -35,7 +35,7 @@ export const NontsriAccountBanner = () => {
                 ได้ทันที
               </Typography>
             </Box>
-          </AnimationOnScroll>
+          </SimpleFadeIn>
           <Box>
             <TypeAnimation
               sequence={[
@@ -72,7 +72,7 @@ export const NontsriAccountBanner = () => {
               textAlign: "start",
             }}
           >
-            <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce delay={1}>
+            <SimpleFadeIn>
               <Typography variant="h6" mb={2}>
                 Nontsri Account
               </Typography>
@@ -81,7 +81,7 @@ export const NontsriAccountBanner = () => {
                 บัญชีของมหาวิทยาลัยเกษตรศาสตร์ที่คุณใช้งานเว็บไซต์อย่างเป็นทางการของมหาวิทยาลัยเกษตรศาสตร์
                 เช่น myku
               </Typography>
-            </AnimationOnScroll>
+            </SimpleFadeIn>
           </Box>
         </Box>
       </Container>

@@ -1,11 +1,10 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { NextPage } from "next";
 import { KraikubLogo } from "../../components/svg/KraikubLogo";
-import { Strip } from "../../components/svg/Strip";
 import { DevelopersBanner } from "./components/DevelopersBanner";
 import { ManageBanner } from "./components/ManageBanner";
 import { NontsriAccountBanner } from "./components/NonsriAccountBanner";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import { SimpleFadeIn } from "../../components/animations/SimpleFadeIn";
 
 export const HomePage: NextPage = () => {
   return (
@@ -34,17 +33,17 @@ export const HomePage: NextPage = () => {
               justifyContent: "center",
             }}
           >
-            <AnimationOnScroll animateIn="animate__zoomIn">
+            <SimpleFadeIn>
               <KraikubLogo width="260px" />
-            </AnimationOnScroll>
+            </SimpleFadeIn>
           </Box>
         </Box>
       </Container>
       {/* <Strip width="100%"/> */}
       
-      <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
+      <SimpleFadeIn>
         <ManageBanner />
-      </AnimationOnScroll>
+      </SimpleFadeIn>
 
       <NontsriAccountBanner />
       <DevelopersBanner />

@@ -1,6 +1,6 @@
 import { Box, Button, Container, Link, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import { SimpleFadeIn } from "../../../components/animations/SimpleFadeIn";
 export const DevelopersBanner = () => {
   return (
     <Box
@@ -21,41 +21,41 @@ export const DevelopersBanner = () => {
         >
           <Box>
             <Box mb={3}>
-              <AnimationOnScroll animateIn="animate__fadeInDown" animateOnce>
+              <SimpleFadeIn>
                 <Typography variant="h3">
                   คุณเป็น Developers ใช่ ไหม?
                 </Typography>
-              </AnimationOnScroll>
+              </SimpleFadeIn>
             </Box>
             <Box>
-              <AnimationOnScroll
-                animateIn="animate__fadeInDown"
-                animateOnce
-                delay={0.5}
-              >
-                <Box mb={4}>
+              <Box mb={4}>
+                <SimpleFadeIn>
                   <Typography variant="body1">
                     Kraikub
                     ช่วยให้คุณสามารถยืนยันตัวตนของผู้ใช้งานของคุณที่มาจากมหาวิทยาลัยเกษตรศาสตร์ได้
                   </Typography>
-                </Box>
+                </SimpleFadeIn>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                }}
+              >
                 <Box
                   sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    maxWidth: "440px",
                   }}
                 >
-                  <Box
-                    sx={{
-                      maxWidth: "440px",
-                    }}
-                  >
+                  <SimpleFadeIn>
                     <Typography variant="body1">
                       ด้วยระบบ OAuth 2.0 พร้อมกับ SDK ที่ Kraikub
                       สร้างขึ้นมาเพื่อนักพัฒนาโดยเฉพาะ
                       ทำให้คุณสามารถนำแอปพิลเคชันมาเชื่อมต่อได้อย่างง่ายดาย
                     </Typography>
+                  </SimpleFadeIn>
+                  <SimpleFadeIn>
                     <Link
                       underline="none"
                       href="https://app.kraikub.com/signin?client_id=7267700f83a8066dd55505a9512e2073&scope=2&state=https://app.kraikub.com/projects/manager&dev=false&redirect_uri=https://app.kraikub.com/auth/callback&"
@@ -71,21 +71,23 @@ export const DevelopersBanner = () => {
                         <EastIcon fontSize="inherit" />
                       </Button>
                     </Link>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: "50%",
-                      minWidth: "350px",
-                    }}
-                  >
+                  </SimpleFadeIn>
+                </Box>
+                <Box
+                  sx={{
+                    width: "50%",
+                    minWidth: "350px",
+                  }}
+                >
+                  <SimpleFadeIn>
                     <img
                       src="/dev-min.png"
                       width="100%"
                       alt="developers-illustration"
                     />
-                  </Box>
+                  </SimpleFadeIn>
                 </Box>
-              </AnimationOnScroll>
+              </Box>
             </Box>
           </Box>
 
