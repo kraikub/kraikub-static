@@ -72,7 +72,7 @@ export const NontsriAccountBanner = () => {
               textAlign: "start",
             }}
           >
-            <SimpleFadeIn>
+            <SimpleFadeIn delay={0.4}>
               <Typography variant="h6" mb={2}>
                 Nontsri Account
               </Typography>

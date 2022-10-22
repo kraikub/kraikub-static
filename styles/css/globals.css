@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+:lang(en) {
+  letter-spacing: 20em;
+}
+
 @keyframes ldio-soqmo0e6scj-r {
   0%, 100% { animation-timing-function: cubic-bezier(0.2 0 0.8 0.8) }
   50% { animation-timing-function: cubic-bezier(0.2 0.2 0.8 1) }

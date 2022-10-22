@@ -20,12 +20,14 @@ export const HomePage: NextPage = () => {
             textAlign: "center",
           }}
         >
-          <Typography variant="h3" my={2}>
-            บัญชีเดียว
-          </Typography>
-          <Typography variant="h3">
-            สำหรับนิสิตมหาวิทยาลัยเกษตรศาสตร์
-          </Typography>
+          <SimpleFadeIn>
+            <Typography variant="h3" my={2}>
+              บัญชีเดียว
+            </Typography>
+            <Typography variant="h3">
+              สำหรับนิสิตมหาวิทยาลัยเกษตรศาสตร์
+            </Typography>
+          </SimpleFadeIn>
           <Box
             sx={{
               my: "50px",
@@ -33,14 +35,14 @@ export const HomePage: NextPage = () => {
               justifyContent: "center",
             }}
           >
-            <SimpleFadeIn>
+            <SimpleFadeIn delay={0.3}>
               <KraikubLogo width="260px" />
             </SimpleFadeIn>
           </Box>
         </Box>
       </Container>
       {/* <Strip width="100%"/> */}
-      
+
       <SimpleFadeIn>
         <ManageBanner />
       </SimpleFadeIn>

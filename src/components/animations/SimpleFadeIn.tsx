@@ -11,8 +11,8 @@ export const SimpleFadeIn: FC<SimpleFadeInProps> = ({ children, delay }) => {
     <AnimationOnScroll
       animateIn="animate__fadeInDown"
       animateOnce
-      delay={delay || 1}
-      duration={1.5}
+      delay={delay ? delay*1000 : 0}
+      duration={1}
     >
       {children}
     </AnimationOnScroll>

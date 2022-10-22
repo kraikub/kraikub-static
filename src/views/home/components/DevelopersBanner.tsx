@@ -29,7 +29,7 @@ export const DevelopersBanner = () => {
             </Box>
             <Box>
               <Box mb={4}>
-                <SimpleFadeIn>
+                <SimpleFadeIn delay={0.3}>
                   <Typography variant="body1">
                     Kraikub
                     ช่วยให้คุณสามารถยืนยันตัวตนของผู้ใช้งานของคุณที่มาจากมหาวิทยาลัยเกษตรศาสตร์ได้
@@ -48,14 +48,14 @@ export const DevelopersBanner = () => {
                     maxWidth: "440px",
                   }}
                 >
-                  <SimpleFadeIn>
+                  <SimpleFadeIn delay={0.5}>
                     <Typography variant="body1">
                       ด้วยระบบ OAuth 2.0 พร้อมกับ SDK ที่ Kraikub
                       สร้างขึ้นมาเพื่อนักพัฒนาโดยเฉพาะ
                       ทำให้คุณสามารถนำแอปพิลเคชันมาเชื่อมต่อได้อย่างง่ายดาย
                     </Typography>
                   </SimpleFadeIn>
-                  <SimpleFadeIn>
+                  <SimpleFadeIn delay={0.7}>
                     <Link
                       underline="none"
                       href="https://app.kraikub.com/signin?client_id=7267700f83a8066dd55505a9512e2073&scope=2&state=https://app.kraikub.com/projects/manager&dev=false&redirect_uri=https://app.kraikub.com/auth/callback&"
@@ -79,7 +79,7 @@ export const DevelopersBanner = () => {
                     minWidth: "350px",
                   }}
                 >
-                  <SimpleFadeIn>
+                  <SimpleFadeIn delay={0.6}>
                     <img
                       src="/dev-min.png"
                       width="100%"
