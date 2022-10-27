@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Kraikub - Authenticate any KU students.</title>
       </Head>
-      <StaticNavbar />
+      <StaticNavbar sticky/>
       <HomePage />
     </>
   );

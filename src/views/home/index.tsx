@@ -41,12 +41,10 @@ export const HomePage: NextPage = () => {
           </Box>
         </Box>
       </Container>
-      {/* <Strip width="100%"/> */}
 
       <SimpleFadeIn>
         <ManageBanner />
-      </SimpleFadeIn>
-
+    </SimpleFadeIn>
       <NontsriAccountBanner />
       <DevelopersBanner />
     </>

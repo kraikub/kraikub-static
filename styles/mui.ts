@@ -20,23 +20,22 @@ export const lightTheme = createTheme({
     fontFamily: `'Inter', sans-serif`,
     fontSize: 16,
     h1: {
-      fontWeight: 500,
-      letterSpacing: -1,
+      fontWeight: 600,
     },
     h2: {
-      letterSpacing: -2,
+      fontWeight: 600,
     },
     h3: {
-      letterSpacing: -2,
+      fontWeight: 600,
     },
     h4: {
-      letterSpacing: -1,
+      fontWeight: 500,
     },
     h5: {
-      letterSpacing: 0,
+      fontWeight: 500,
     },
     h6: {
-      letterSpacing: 0,
+      fontWeight: 500,
     },
     body1: {
       fontWeight: 300,
@@ -44,7 +43,7 @@ export const lightTheme = createTheme({
     },
     body2: {
       fontWeight: 300,
-      color: "#000000b0",
+      color: "#00000080",
       fontSize: 14,
     },
     button: {
@@ -58,5 +57,12 @@ export const lightTheme = createTheme({
         disableElevation: true,
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+        }
+      }
+    }
   },
 });

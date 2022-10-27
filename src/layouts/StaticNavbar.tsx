@@ -1,37 +1,78 @@
-import { Box, Collapse, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import { KraikubLogo } from "../components/svg/KraikubLogo";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import Link from "next/link";
+import { FC } from "react";
 
-export const StaticNavbar = () => {
-  const [show, setShow] = useState<boolean>(true);
+interface NavbarLinkProps {
+  text: string;
+  href: string;
+}
 
+interface StaticNavbarProps {
+  sticky?: boolean;
+}
+
+const NavbarLink: FC<NavbarLinkProps> = ({ text, href }) => {
+  return (
+    <Link href={href} color="inherit">
+      <a>
+        <Typography
+          variant="body2"
+          sx={{
+            color: "inherit",
+            opacity: 0.4,
+            transition: "200ms ease",
+            "&:hover": {
+              opacity: 0.8,
+            },
+          }}
+        >
+          {text}
+        </Typography>
+      </a>
+    </Link>
+  );
+};
+
+export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
   return (
     <Box
       sx={{
-        backgroundColor: "white",
-        position: "sticky",
+        backgroundColor: "#ffffffa0",
+        position: sticky ? "sticky" : "relative",
         top: 0,
         left: 0,
         right: 0,
-        minHeight: "70px",
-        height: "70px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingX: "30px",
-        border: "solid #00000020",
+        border: "solid",
         borderWidth: "0 0 1px 0",
+        borderColor: "#00000010",
         zIndex: 100,
+        backdropFilter: "saturate(180%) blur(13px)",
+        color: "#000",
       }}
     >
-      <Box
+      <Container
+        maxWidth="xl"
         sx={{
           display: "flex",
+          justifyContent: "space-between",
           alignItems: "center",
           gap: 1,
+          minHeight: "60px",
+          height: "60px",
         }}
       >
-        <KraikubLogo height="30px" />
+        <Box>
+          <Link href="/">
+            <a>
+              <Typography variant="h5" fontSize={18} fontWeight={500}>
+                kraikub.
+              </Typography>
+            </a>
+          </Link>
+        </Box>
         {/* <Typography
           fontFamily={`'Manrope', sans-serif`}
           fontSize={20}
@@ -39,7 +80,20 @@ export const StaticNavbar = () => {
         >
           kraikub
         </Typography> */}
-      </Box>
+        <Stack direction="row" spacing={4} alignItems="center">
+          <NavbarLink href="/products" text="Products" />
+          <Button
+            size="small"
+            variant="contained"
+            sx={{
+              textTransform: "none",
+              borderRadius: "1000px",
+            }}
+          >
+            Use now
+          </Button>
+        </Stack>
+      </Container>
     </Box>
   );
 };

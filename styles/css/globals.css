@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap'); */
 
 body {
   margin: 0;
   padding: 0;
 }
 
-:lang(en) {
-  letter-spacing: 20em;
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.letter-spacing-1 {
+  letter-spacing: -1px ;
+}
+.letter-spacing-2 {
+  letter-spacing: -2px;
 }
 
 @keyframes ldio-soqmo0e6scj-r {
@@ -84,4 +93,48 @@ body {
 
 .float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-green-gradient {
+  background: linear-gradient(336deg, #11cf00, #0092b2);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  -o-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+.fade-in {
+  animation: fade-in-easy 4s ease;
+}
+
+@keyframes fade-in-easy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
 }
