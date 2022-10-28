@@ -1,6 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useRef } from "react";
+import { useNavbarControl } from "../hooks/useNavbarControl";
 
 interface NavbarLinkProps {
   text: string;
@@ -12,6 +13,7 @@ interface StaticNavbarProps {
 }
 
 const NavbarLink: FC<NavbarLinkProps> = ({ text, href }) => {
+
   return (
     <Link href={href} color="inherit">
       <a>
@@ -34,10 +36,13 @@ const NavbarLink: FC<NavbarLinkProps> = ({ text, href }) => {
 };
 
 export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
+
+  const { color } = useNavbarControl()
+
   return (
     <Box
       sx={{
-        backgroundColor: "#ffffffa0",
+        // backgroundColor: "#ffffffa0",
         position: sticky ? "sticky" : "relative",
         top: 0,
         left: 0,
@@ -50,7 +55,8 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
         borderColor: "#00000010",
         zIndex: 100,
         backdropFilter: "saturate(180%) blur(13px)",
-        color: "#000",
+        color: color,
+        transition: "400ms ease",
       }}
     >
       <Container

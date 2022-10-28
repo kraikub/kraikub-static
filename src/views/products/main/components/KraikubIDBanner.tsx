@@ -9,9 +9,14 @@ import {
 import { KraikubIDGraphic } from "./KraikubIDGraphic";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { GradientLine } from "../../../../components/svg/GradientLine";
+import { useContrastNavbar } from "../../../../hooks/useContrastNavbar";
+import { useRef } from "react";
 export const KraikubIDBanner = () => {
+  const ref = useRef<Element>(null)
+  const isActive = useContrastNavbar(ref, "#fff")
   return (
     <Box
+    ref={ref}
       sx={{
         backgroundColor: "#000",
       }}
