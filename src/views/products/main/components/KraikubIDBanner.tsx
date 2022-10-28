@@ -12,11 +12,12 @@ import { GradientLine } from "../../../../components/svg/GradientLine";
 import { useContrastNavbar } from "../../../../hooks/useContrastNavbar";
 import { useRef } from "react";
 export const KraikubIDBanner = () => {
-  const ref = useRef<Element>(null)
-  const isActive = useContrastNavbar(ref, "#fff")
+  const ref = useRef<Element>(null);
+  const isActive = useContrastNavbar(ref, "#fff");
   return (
     <Box
-    ref={ref}
+      id="kraikub-id"
+      ref={ref}
       sx={{
         backgroundColor: "#000",
       }}

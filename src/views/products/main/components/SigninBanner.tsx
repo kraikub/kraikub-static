@@ -5,7 +5,7 @@ import { GradientLine } from "../../../../components/svg/GradientLine";
 
 export const SigninBanner: FC = () => {
   return (
-    <Box>
+    <Box id="sign-in-with-ku">
       <Container
         maxWidth="lg"
         sx={{
