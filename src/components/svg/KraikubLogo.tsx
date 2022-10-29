@@ -9,8 +9,8 @@ interface KraikubLogoProps {
 export const KraikubLogo: FC<KraikubLogoProps> = ({ width, height }) => {
   return (
     <svg
-      width={width || ""}
-      height={height || ""}
+      width={width}
+      height={height}
       viewBox="0 0 2644 3168"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

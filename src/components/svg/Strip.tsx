@@ -5,8 +5,8 @@ interface StripProps extends SvgProps {}
 export const Strip: FC<StripProps> = ({ width, height }) => {
   return (
     <svg
-      width={width || "auto"}
-      height={width || "height"}
+      width={width}
+      height={height}
       viewBox="0 0 9650 825"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

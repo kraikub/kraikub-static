@@ -3,7 +3,7 @@ import { FC } from "react";
 export const GradientLine: FC<SvgProps> = ({ width, height }) => {
   return (
     <svg
-      width={width || "100%"}
+      width={width}
       height={height || 5}
       viewBox="0 0 993 5"
       fill="none"

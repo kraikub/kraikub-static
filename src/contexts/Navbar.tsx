@@ -23,7 +23,7 @@ export const NavbarContext = createContext<NavbarProviderValue>({
 
 export const NavbarProvider: FC<NavbarProviderProps> = ({ children }) => {
   const [color, setColor] = useState<string>("#000");
-  const [overlayColor, setOverlayColor] = useState<string>("#000");
+  const [overlayColor, setOverlayColor] = useState<string>("#fff");
 
   const resetColor = () => {
     setColor("#000");
