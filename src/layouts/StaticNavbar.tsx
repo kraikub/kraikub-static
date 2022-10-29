@@ -108,9 +108,10 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           borderWidth: "0 0 1px 0",
           borderColor: "#00000010",
           zIndex: 100,
-          backdropFilter: "saturate(180%) blur(13px)",
+          backgroundColor: `${overlayColor}b8`,
+          backdropFilter: "saturate(180%) blur(20px)",
           color: color,
-          transition: "400ms ease",
+          transition: "100ms ease",
         }}
       >
         <Container
@@ -237,6 +238,7 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                     textTransform: "none",
                     fontWeight: 500,
                     gap: 1,
+                    borderRadius: "1000px",
                   }}
                 >
                   Your Kraikub ID
@@ -252,7 +254,10 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                       <Typography variant="h5" fontSize={18} fontWeight={500}>
                         kraikub.
                       </Typography>
-                      <Typography variant="body2" fontSize={12}>
+                      <Typography variant="body2" fontSize={12} sx={{
+                        color: color,
+                        opacity: 0.6,
+                      }}>
                         Student Identity Provider for Kasetsart University.
                       </Typography>
                     </Box>
@@ -261,6 +266,8 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                 <Divider
                   sx={{
                     my: 3,
+                    background: color,
+                    opacity: 0.2,
                   }}
                 />
               </Box>

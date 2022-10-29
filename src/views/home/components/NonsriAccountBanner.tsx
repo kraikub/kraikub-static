@@ -39,17 +39,11 @@ export const NontsriAccountBanner = () => {
           <Box>
             <TypeAnimation
               sequence={[
-                "b62••••••••",
-                2000,
-                "b63••••••••",
-                2000,
-                "b64••••••••",
-                2000,
-                "b65••••••••",
-                2000,
-                "One Account",
+                "",
                 1000,
-                "For KU",
+                "b6X••••••••",
+                5000,
+                "ลองใช้เลย",
                 1000,
                 "kraikub.com",
                 10000,
@@ -61,7 +55,8 @@ export const NontsriAccountBanner = () => {
                 fontWeight: 600,
                 fontSize: "300%",
                 color: "inherit",
-                fontFamily: `'Manrope', sans-serif`,
+                fontFamily: `'Inter','Kanit', sans-serif`,
+                letterSpacing: "-1px",
                 minHeight: "100px",
               }}
             />

@@ -22,7 +22,7 @@ export const ManageBanner = () => {
         borderRadius: "20px"
       }}>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <Box mb={3}>
               <Typography variant="h4">จัดการบัญชี</Typography>
               <Typography variant="h4">มหาวิทยาลัยเกษตรศาสตร์ของคุณ</Typography>
@@ -39,6 +39,7 @@ export const ManageBanner = () => {
                 sx={{
                   height: "60px",
                   gap: 2,
+                  minWidth: "100px"
                 }}
               >
                 เร็วๆนี้
@@ -55,8 +56,7 @@ export const ManageBanner = () => {
               </Button>
             </Stack>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            {/* <img src="/students.jpg" alt="students" width="100%"></img> */}
+          <Grid item xs={12} sm={5}>
           </Grid>
         </Grid>
       </Box>

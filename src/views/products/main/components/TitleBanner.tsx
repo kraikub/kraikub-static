@@ -29,6 +29,7 @@ export const TitleBanner: FC = () => {
           >
             Discover Kraikub products
           </Typography>
+          <Typography variant="body1" mt={2}>บริการจาก Kraikub</Typography>
         </Box>
         <Grid container spacing={2} my={10}>
           <Grid item xs={12} sm={12} md={6}>

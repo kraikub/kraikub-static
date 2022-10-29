@@ -25,11 +25,11 @@ export const KraikubIDBanner = () => {
     >
       <Container
         sx={{
-          py: "400px",
+          py: "300px",
           color: "#fff",
         }}
       >
-        <Box>
+        <Box textAlign="center">
           <SimpleFadeIn>
             <Typography variant="h2" className="letter-spacing-2">
               Kraikub ID
@@ -48,6 +48,7 @@ export const KraikubIDBanner = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              py: "70px"
             }}
           >
             <KraikubIDGraphic width="100%" />

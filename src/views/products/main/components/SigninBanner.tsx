@@ -3,6 +3,7 @@ import { FC } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { GradientLine } from "../../../../components/svg/GradientLine";
 import { SimpleFadeIn } from "../../../../components/animations/SimpleFadeIn";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const SigninBanner: FC = () => {
   return (
@@ -13,7 +14,7 @@ export const SigninBanner: FC = () => {
           py: "50px",
         }}
       >
-        <Box>
+        <Box textAlign="center">
           <SimpleFadeIn>
             <Typography variant="h2" className="letter-spacing-2">
               Sign in with KU
@@ -50,7 +51,7 @@ export const SigninBanner: FC = () => {
                   alignItems: "center",
                 }}
               >
-                <SimpleFadeIn>
+                <AnimationOnScroll animateIn="animate__headShake" initiallyVisible delay={500}>
                   <Box
                     sx={{
                       display: "flex",
@@ -66,7 +67,7 @@ export const SigninBanner: FC = () => {
                   >
                     <ArrowForwardIcon fontSize="inherit" />
                   </Box>
-                </SimpleFadeIn>
+                  </AnimationOnScroll>
               </Box>
             </Grid>
           </Grid>

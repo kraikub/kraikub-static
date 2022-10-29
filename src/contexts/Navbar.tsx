@@ -13,21 +13,23 @@ interface NavbarProviderProps {
   children: any;
 }
 
-export const NavbarContext = createContext<NavbarProviderValue>({
-  color: "#000",
+const defaultNavbarContext = {
+  color: "#000000",
   setColor: () => {},
   resetColor: () => {},
-  overlayColor: "#fff",
+  overlayColor: "#ffffff",
   setOverlayColor: () => {},
-});
+}
+
+export const NavbarContext = createContext<NavbarProviderValue>(defaultNavbarContext);
 
 export const NavbarProvider: FC<NavbarProviderProps> = ({ children }) => {
-  const [color, setColor] = useState<string>("#000");
-  const [overlayColor, setOverlayColor] = useState<string>("#fff");
+  const [color, setColor] = useState<string>(defaultNavbarContext.color);
+  const [overlayColor, setOverlayColor] = useState<string>(defaultNavbarContext.overlayColor);
 
   const resetColor = () => {
-    setColor("#000");
-    setOverlayColor("#fff");
+    setColor(defaultNavbarContext.color);
+    setOverlayColor(defaultNavbarContext.overlayColor);
   };
 
   return (

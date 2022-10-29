@@ -17,7 +17,7 @@ export const lightTheme = createTheme({
     borderRadius: 8,
   },
   typography: {
-    fontFamily: `'Inter', sans-serif`,
+    fontFamily: `'Inter','Kanit', sans-serif`,
     fontSize: 16,
     h1: {
       fontWeight: 600,
