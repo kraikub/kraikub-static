@@ -14,7 +14,7 @@ import { useRef } from "react";
 import { SimpleFadeIn } from "../../../../components/animations/SimpleFadeIn";
 export const KraikubIDBanner = () => {
   const ref = useRef<Element>(null);
-  const isActive = useContrastNavbar(ref, "#fff");
+  useContrastNavbar(ref, "#fff", "#000");
   return (
     <Box
       id="kraikub-id"

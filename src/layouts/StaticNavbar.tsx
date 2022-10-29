@@ -14,7 +14,7 @@ import { FC, useState } from "react";
 import { useNavbarControl } from "../hooks/useNavbarControl";
 import { IoCloseOutline } from "react-icons/io5";
 import { TbMenu } from "react-icons/tb";
-import { BsArrowRight }  from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 interface NavbarLinkProps {
   text: string;
   href: string;
@@ -73,7 +73,7 @@ const NavbarLink: FC<NavbarLinkProps> = ({
               size="small"
               label={chipText}
               sx={{
-                fontSize: 10,
+                fontSize: 8,
                 color: chipColor,
                 backgroundColor: chipBg,
               }}
@@ -86,7 +86,7 @@ const NavbarLink: FC<NavbarLinkProps> = ({
 };
 
 export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
-  const { color } = useNavbarControl();
+  const { color, overlayColor } = useNavbarControl();
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Box
@@ -159,7 +159,7 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           </Stack>
           <IconButton
             sx={{
-              color: "#000",
+              color: color,
               fontSize: 20,
               display: {
                 xs: "inline-flex",
@@ -180,6 +180,8 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           sx: {
             width: "100vw",
             position: "relative",
+            color: color,
+            backgroundColor: overlayColor,
           },
         }}
       >
@@ -187,7 +189,6 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           sx={{
             width: "100vw",
             height: "100vh",
-            backgroundColor: "#fff",
             position: "relative",
             py: "100px",
           }}
@@ -199,7 +200,13 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
               right: 15,
             }}
           >
-            <IconButton size="small" onClick={() => setIsModalOpen(false)}>
+            <IconButton
+              size="small"
+              onClick={() => setIsModalOpen(false)}
+              sx={{
+                color: color,
+              }}
+            >
               <IoCloseOutline />
             </IconButton>
           </Box>
@@ -222,15 +229,14 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                   textTransform: "none",
                   fontWeight: 500,
                   gap: 1,
-
                 }}
               >
                 Your Kraikub ID
-                <BsArrowRight size="22px"/>
+                <BsArrowRight size="22px" />
               </Button>
             </Container>
           </Box>
-          <Container >
+          <Container>
             <Box mb={6}>
               <Link href="/">
                 <a>

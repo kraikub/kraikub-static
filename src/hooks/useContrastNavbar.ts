@@ -4,9 +4,10 @@ import { useNavbarControl } from "./useNavbarControl";
 
 export const useContrastNavbar = (
   ref: MutableRefObject<Element | null>,
-  color: string
+  color: string,
+  overlayBackgroundColor: string,
 ) => {
-  const { color: navColor, setColor, resetColor } = useNavbarControl();
+  const { setColor, resetColor, setOverlayColor } = useNavbarControl();
   const [isReset, setIsReset] = useState<boolean>();
   const [active, setActive] = useState<boolean>(false);
 
@@ -15,11 +16,12 @@ export const useContrastNavbar = (
       window.addEventListener("scroll", () => {
         if (ref.current) {
           let pos = ref.current.getBoundingClientRect();
-          // hit top border
+          // in view port
           if (pos.y <= 0 && pos.bottom > 0) {
             setIsReset(false)
             setActive(true);
             setColor(color);
+            setOverlayColor(overlayBackgroundColor);
           }
           else {
             if (!isReset) {
