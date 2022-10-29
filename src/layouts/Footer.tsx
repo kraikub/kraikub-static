@@ -33,10 +33,10 @@ export const Footer = () => {
       }}
     >
       <Container>
-        <Typography variant="h6" fontSize={16}>
+        <Typography variant="h6" fontSize={14}>
           Kraikub
         </Typography>
-        <Typography variant="body2" fontSize={14} fontWeight={300}>
+        <Typography variant="body2" fontSize={12} fontWeight={300}>
           Copyright © 2022 Nutchanon Chantrasup. All rights reserved.
         </Typography>
         <Grid my="30px" container rowGap={8}>
@@ -56,7 +56,7 @@ export const Footer = () => {
                 Articles
               </Typography>
               <FooterLink text="Why Kraikub?" href="/"/>
-              <FooterLink text="About us" href="/products"/>
+              <FooterLink text="About us" href="/articles/about-us"/>
               <FooterLink text="Privacy Policy" href="/products"/>
             </Stack>
           </Grid>

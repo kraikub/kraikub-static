@@ -72,16 +72,14 @@ export const NontsriAccountBanner = () => {
               textAlign: "start",
             }}
           >
-            <SimpleFadeIn delay={0.4}>
-              <Typography variant="h6" mb={2}>
-                Nontsri Account
-              </Typography>
-              <Typography variant="body2">
-                บัญชีนนทรี (Nontsri Account) คือ
-                บัญชีของมหาวิทยาลัยเกษตรศาสตร์ที่คุณใช้งานเว็บไซต์อย่างเป็นทางการของมหาวิทยาลัยเกษตรศาสตร์
-                เช่น myku
-              </Typography>
-            </SimpleFadeIn>
+            <Typography variant="h6" mb={2}>
+              Nontsri Account
+            </Typography>
+            <Typography variant="body2">
+              บัญชีนนทรี (Nontsri Account) คือ
+              บัญชีของมหาวิทยาลัยเกษตรศาสตร์ที่คุณใช้งานเว็บไซต์อย่างเป็นทางการของมหาวิทยาลัยเกษตรศาสตร์
+              เช่น myku
+            </Typography>
           </Box>
         </Box>
       </Container>

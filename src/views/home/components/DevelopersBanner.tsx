@@ -80,13 +80,12 @@ export const DevelopersBanner = () => {
                     overflow: "hidden"
                   }}
                 >
-                  <SimpleFadeIn delay={0.4}>
+
                     <img
                       src="/dev-min.png"
                       width="100%"
                       alt="developers-illustration"
                     />
-                  </SimpleFadeIn>
                 </Box>
               </Box>
             </Box>
@@ -109,9 +108,6 @@ export const DevelopersBanner = () => {
             </Typography>
             <Typography variant="body2" mt={2}>
               Created by Computer Engineering student, Kasetsart University.
-            </Typography>
-            <Typography variant="body2" mt={2}>
-              © 2022, Nutchanon Chantrasup
             </Typography>
           </Box>
         </Box>

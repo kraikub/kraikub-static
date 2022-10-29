@@ -5,6 +5,7 @@ import { DevelopersBanner } from "./components/DevelopersBanner";
 import { ManageBanner } from "./components/ManageBanner";
 import { NontsriAccountBanner } from "./components/NonsriAccountBanner";
 import { SimpleFadeIn } from "../../components/animations/SimpleFadeIn";
+import { Footer } from "../../layouts/Footer";
 
 export const HomePage: NextPage = () => {
   return (
@@ -44,9 +45,10 @@ export const HomePage: NextPage = () => {
 
       <SimpleFadeIn>
         <ManageBanner />
-    </SimpleFadeIn>
+      </SimpleFadeIn>
       <NontsriAccountBanner />
       <DevelopersBanner />
+      <Footer />
     </>
   );
 };

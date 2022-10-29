@@ -26,7 +26,6 @@ export const ManageBanner = () => {
             <Box mb={3}>
               <Typography variant="h4">จัดการบัญชี</Typography>
               <Typography variant="h4">มหาวิทยาลัยเกษตรศาสตร์ของคุณ</Typography>
-              <Typography variant="h5" mt={3}>(เร็วๆนี้)</Typography>
             </Box>
             <Box mb={4}>
               <Typography variant="body1" color="inherit">
@@ -42,7 +41,8 @@ export const ManageBanner = () => {
                   gap: 2,
                 }}
               >
-                บัญชีของฉัน <EastIcon fontSize="inherit" />
+                เร็วๆนี้
+                {/* <EastIcon fontSize="inherit" /> */}
               </Button>
               <Button
                 color="secondary"

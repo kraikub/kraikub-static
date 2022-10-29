@@ -21,22 +21,22 @@ export const ArticlePage: FC<ArticlePageProps> = (props) => {
       </Head>
       <StaticNavbar />
       <Container
+        maxWidth="md"
         sx={{
           pt: "50px",
           pb: "120px",
           minHeight: "100vh",
         }}
       >
-        <Box sx={{
-          position: "sticky",
-          top: 0,
-          pt: 5,
-          backgroundColor: "#fff",
-        }}>
-          <Typography
-            variant="h5"
-            fontWeight={600}
-          >
+        <Box
+          sx={{
+            position: "sticky",
+            top: 0,
+            pt: 5,
+            backgroundColor: "#fff",
+          }}
+        >
+          <Typography variant="h5" fontWeight={600}>
             {props.metadata.title}
           </Typography>
           <Typography
