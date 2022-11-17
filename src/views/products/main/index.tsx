@@ -10,7 +10,7 @@ export const ProductPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Discover Kraikub products</title>
+        <title>Our services</title>
       </Head>
       <StaticNavbar sticky/>
       <TitleBanner />

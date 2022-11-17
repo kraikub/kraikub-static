@@ -30,8 +30,8 @@ interface StaticNavbarProps {
 
 const links = [
   {
-    text: "Products",
-    href: "/products",
+    text: "Services",
+    href: "/services",
   },
   {
     href: "https://app.kraikub.com",

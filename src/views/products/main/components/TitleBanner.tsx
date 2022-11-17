@@ -27,9 +27,11 @@ export const TitleBanner: FC = () => {
             className="letter-spacing-1"
             fontWeight={500}
           >
-            Discover Kraikub products
+            Discover Kraikub services
           </Typography>
-          <Typography variant="body1" mt={2}>บริการจาก Kraikub</Typography>
+          <Typography variant="body1" mt={2}>
+            บริการจาก Kraikub
+          </Typography>
         </Box>
         <Grid container spacing={2} my={10}>
           <Grid item xs={12} sm={12} md={6}>
@@ -42,7 +44,7 @@ export const TitleBanner: FC = () => {
                     minHeight: "400px",
                     position: "relative",
                     overflow: "hidden",
-                    borderRadius: "6px",
+                    borderRadius: "14px",
                     backgroundColor: "#f6f6f6",
                   }}
                 >
@@ -76,16 +78,16 @@ export const TitleBanner: FC = () => {
                   <Box
                     sx={{
                       position: "absolute",
-                      top: "-60%",
-                      left: "18%",
+                      top: 0,
+                      left: 0,
+                      bottom: 0,
+                      right: 0,
                       zIndex: 31,
+                      backgroundImage: "url(/kraikub-bg-1a.svg)",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                     }}
-                  >
-                    <img
-                      src="/kraikub-sinku-product-wallpaper.png"
-                      width="1000px"
-                    />
-                  </Box>
+                  ></Box>
                   <Box
                     sx={{
                       position: "absolute",
@@ -95,19 +97,22 @@ export const TitleBanner: FC = () => {
                       right: 0,
                       zIndex: 35,
                       display: "flex",
+                      justifyContent: "center",
                       alignItems: "center",
                       padding: "30px",
                     }}
                   >
-                    <Box>
-                      <Typography variant="h3" className="letter-spacing-2">
-                        Sign in
+                    <Box textAlign="center">
+                      <Typography
+                        variant="h3"
+                        className="letter-spacing-2"
+                        fontWeight={600}
+                        color="#ffffff"
+                      >
+                        Sign in with KU
                       </Typography>
-                      <Typography variant="h3" className="letter-spacing-2">
-                        with KU
-                      </Typography>
-                      <Typography variant="h6" mt="20px" sx={{ opacity: 0.6 }}>
-                        เข้าสู่ระบบด้วยบัญชี Kasetsart
+                      <Typography color="#ffffff" mt={2}>
+                        Best sign in method for KU students ever.
                       </Typography>
                     </Box>
                   </Box>
@@ -125,9 +130,10 @@ export const TitleBanner: FC = () => {
                     minHeight: "400px",
                     position: "relative",
                     overflow: "hidden",
-                    borderRadius: "6px",
-                    background:
-                      "linear-gradient(127.66deg, #000000 8.09%, #24423F 108.06%);",
+                    borderRadius: "14px",
+                    backgroundImage: "url(/kraikub-bg-1b.svg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
                   <Box
@@ -167,49 +173,24 @@ export const TitleBanner: FC = () => {
                       right: 0,
                       zIndex: 35,
                       padding: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
-                    <Box
-                      sx={{
-                        textAlign: "center",
-                        color: "#fff",
-                      }}
-                    >
+                    <Box textAlign="center">
                       <Typography
-                        variant="h4"
-                        className="letter-spacing-1"
-                        fontWeight={500}
+                        variant="h3"
+                        className="letter-spacing-2"
+                        fontWeight={600}
+                        color="#ffffff"
                       >
                         Kraikub ID
                       </Typography>
-                      <Typography variant="h6" mt={3} sx={{ opacity: 0.6 }}>
-                        Account มหาวิทยาลัยเวอร์ชันอัพเกรด
+                      <Typography color="#ffffff" mt={2}>
+                        Your new university account.
                       </Typography>
                     </Box>
-                    <Stack
-                      width="100%"
-                      alignItems="center"
-                      direction="column"
-                      spacing={2}
-                      sx={{
-                        my: "20px",
-                      }}
-                    >
-                      <KraikubIDGraphic width="100%" />
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          width: "70px",
-                          height: "70px",
-                          backgroundColor: "#61FFB3",
-                          borderRadius: "50%",
-                        }}
-                      >
-                        <ArrowForwardIcon />
-                      </Box>
-                    </Stack>
                   </Box>
                 </Box>
               </SimpleFadeIn>

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 html {
@@ -23,6 +23,12 @@ a {
 }
 .letter-spacing-2 {
   letter-spacing: -2px;
+}
+
+.black-text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  color: white;
 }
 
 .kraikub__fade_in {

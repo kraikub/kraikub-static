@@ -31,36 +31,23 @@ export const KraikubIDBanner = () => {
       >
         <Box textAlign="center">
           <SimpleFadeIn>
-            <Typography variant="h2" className="letter-spacing-2">
+            <Typography variant="h2" className="letter-spacing-2" fontWeight={600}>
               Kraikub ID
             </Typography>
           </SimpleFadeIn>
           <SimpleFadeIn delay={0.3}>
             <Typography variant="h6" mt="20px" fontWeight={400}>
               Account มหาวิทยาลัยเวอร์ชันอัพเกรด
-              ยกระดับประสบการณ์การใช้งานอินเตอร์เน็ต
             </Typography>
           </SimpleFadeIn>
         </Box>
-        <SimpleFadeIn delay={0.4} duration={2}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              py: "70px"
-            }}
-          >
-            <KraikubIDGraphic width="100%" />
-          </Box>
-        </SimpleFadeIn>
         <Box
           sx={{
             my: "300px",
           }}
         >
           <SimpleFadeIn>
-            <Typography variant="h3" fontWeight={400}>
+            <Typography variant="h4" fontWeight={500}>
               นี่คือ Account มหาวิทยาลัยรูปแบบใหม่
             </Typography>
           </SimpleFadeIn>
@@ -84,7 +71,7 @@ export const KraikubIDBanner = () => {
                 my: 5,
               }}
             >
-              <ButtonBase
+              <Button
                 sx={{
                   backgroundColor: "#fff",
                   color: "#000",
@@ -93,10 +80,13 @@ export const KraikubIDBanner = () => {
                   px: "50px",
                   fontSize: "18px",
                   gap: 2,
+                  "&:hover": {
+                    backgroundColor: "#e4e4e4"
+                  }
                 }}
               >
                 เริ่มต้นใช้งาน <ArrowForwardIcon fontSize="inherit" />
-              </ButtonBase>
+              </Button>
             </Box>
           </SimpleFadeIn>
         </Box>
@@ -139,6 +129,20 @@ export const KraikubIDBanner = () => {
                   เช่นแจ้งเตื่อนทุกครั้งที่มีการเข้าสู่ระบบเกิดขึ้น
                   ดังนั้นคุณจะมั่นใจได้ว่า Kraikub ID ของคุณนั้นจะปลอดภัย
                   และอนู่ในการควบคุมของคุณเพียงคนเดียวเท่านั้น
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography variant="h6" className="letter-spacing-1">
+                  2FA
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography
+                  variant="body1"
+                  color="inherit"
+                  sx={{ opacity: 0.6 }}
+                >
+                  ใช้งาน Account ของมหวิทยาลัยได้ปลอดภัยยิ่งขึ้น
                 </Typography>
               </Grid>
             </Grid>

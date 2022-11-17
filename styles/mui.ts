@@ -20,13 +20,13 @@ export const lightTheme = createTheme({
     fontFamily: `'Inter','Kanit', sans-serif`,
     fontSize: 16,
     h1: {
-      fontWeight: 600,
+      fontWeight: 500,
     },
     h2: {
-      fontWeight: 600,
+      fontWeight: 500,
     },
     h3: {
-      fontWeight: 600,
+      fontWeight: 500,
     },
     h4: {
       fontWeight: 500,

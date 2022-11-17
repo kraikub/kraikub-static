@@ -16,7 +16,11 @@ export const SigninBanner: FC = () => {
       >
         <Box textAlign="center">
           <SimpleFadeIn>
-            <Typography variant="h2" className="letter-spacing-2">
+            <Typography
+              variant="h2"
+              className="letter-spacing-2"
+              fontWeight={600}
+            >
               Sign in with KU
             </Typography>
           </SimpleFadeIn>
@@ -51,7 +55,11 @@ export const SigninBanner: FC = () => {
                   alignItems: "center",
                 }}
               >
-                <AnimationOnScroll animateIn="animate__headShake" initiallyVisible delay={500}>
+                <AnimationOnScroll
+                  animateIn="animate__headShake"
+                  initiallyVisible
+                  delay={500}
+                >
                   <Box
                     sx={{
                       display: "flex",
@@ -67,7 +75,7 @@ export const SigninBanner: FC = () => {
                   >
                     <ArrowForwardIcon fontSize="inherit" />
                   </Box>
-                  </AnimationOnScroll>
+                </AnimationOnScroll>
               </Box>
             </Grid>
           </Grid>
