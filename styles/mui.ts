@@ -49,6 +49,7 @@ export const lightTheme = createTheme({
     button: {
       fontSize: 16,
       fontWeight: 400,
+      textTransform: "none",
     },
   },
   components: {

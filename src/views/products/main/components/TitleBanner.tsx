@@ -106,10 +106,11 @@ export const TitleBanner: FC = () => {
                       <Typography
                         variant="h3"
                         className="letter-spacing-2"
-                        fontWeight={600}
+                        fontWeight={200}
                         color="#ffffff"
                       >
-                        Sign in with KU
+                        <Typography variant="inherit" display="inline" fontWeight={600}>
+                        SIGN IN</Typography> WITH KU
                       </Typography>
                       <Typography color="#ffffff" mt={2}>
                         Best sign in method for KU students ever.
@@ -182,10 +183,11 @@ export const TitleBanner: FC = () => {
                       <Typography
                         variant="h3"
                         className="letter-spacing-2"
-                        fontWeight={600}
+                        fontWeight={300}
                         color="#ffffff"
                       >
-                        Kraikub ID
+                        <Typography variant="inherit" display="inline" fontWeight={600}>
+                        KRAIKUB</Typography> ID
                       </Typography>
                       <Typography color="#ffffff" mt={2}>
                         Your new university account.

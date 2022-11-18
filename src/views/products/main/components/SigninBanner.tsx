@@ -17,11 +17,14 @@ export const SigninBanner: FC = () => {
         <Box textAlign="center">
           <SimpleFadeIn>
             <Typography
-              variant="h2"
+              variant="h3"
               className="letter-spacing-2"
-              fontWeight={600}
+              fontWeight={200}
             >
-              Sign in with KU
+              <Typography variant="inherit" display="inline" fontWeight={600}>
+                SIGN IN
+              </Typography>{" "}
+              WITH KU
             </Typography>
           </SimpleFadeIn>
           <SimpleFadeIn delay={0.2}>

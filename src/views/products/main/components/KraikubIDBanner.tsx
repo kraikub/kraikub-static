@@ -31,8 +31,16 @@ export const KraikubIDBanner = () => {
       >
         <Box textAlign="center">
           <SimpleFadeIn>
-            <Typography variant="h2" className="letter-spacing-2" fontWeight={600}>
-              Kraikub ID
+            <Typography
+              variant="h3"
+              className="letter-spacing-2"
+              fontWeight={300}
+              color="#ffffff"
+            >
+              <Typography variant="inherit" display="inline" fontWeight={600}>
+                KRAIKUB
+              </Typography>{" "}
+              ID
             </Typography>
           </SimpleFadeIn>
           <SimpleFadeIn delay={0.3}>
@@ -81,8 +89,8 @@ export const KraikubIDBanner = () => {
                   fontSize: "18px",
                   gap: 2,
                   "&:hover": {
-                    backgroundColor: "#e4e4e4"
-                  }
+                    backgroundColor: "#e4e4e4",
+                  },
                 }}
               >
                 เริ่มต้นใช้งาน <ArrowForwardIcon fontSize="inherit" />

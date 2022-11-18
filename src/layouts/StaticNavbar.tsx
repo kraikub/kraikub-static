@@ -92,9 +92,9 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
 
   return (
     <>
-    <Head>
-      <meta name="theme-color" content={overlayColor}/>
-    </Head>
+      <Head>
+        <meta name="theme-color" content={overlayColor} />
+      </Head>
       <Box
         sx={{
           position: sticky ? "sticky" : "relative",
@@ -128,9 +128,19 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           <Box>
             <Link href="/">
               <a>
-                <Typography variant="h5" fontSize={18} fontWeight={500}>
-                  kraikub.
-                </Typography>
+                <Stack direction="row" alignItems="center" spacing="5px">
+                  <img
+                    src="/icons/kraikub-icon.svg"
+                    style={{
+                      display: "inline",
+                      height: 22,
+                    }}
+                    alt="kraikub-icon"
+                  />
+                  <Typography variant="h5" fontSize={16} fontWeight={600}>
+                    KRAIKUB
+                  </Typography>
+                </Stack>
               </a>
             </Link>
           </Box>
@@ -254,10 +264,14 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                       <Typography variant="h5" fontSize={18} fontWeight={500}>
                         kraikub.
                       </Typography>
-                      <Typography variant="body2" fontSize={12} sx={{
-                        color: color,
-                        opacity: 0.6,
-                      }}>
+                      <Typography
+                        variant="body2"
+                        fontSize={12}
+                        sx={{
+                          color: color,
+                          opacity: 0.6,
+                        }}
+                      >
                         Student Identity Provider for Kasetsart University.
                       </Typography>
                     </Box>
