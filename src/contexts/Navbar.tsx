@@ -1,4 +1,5 @@
-import { createContext, Dispatch, FC, SetStateAction, useState } from "react";
+import { useRouter } from "next/router";
+import { createContext, Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 
 interface NavbarProviderValue {
   color: string;
@@ -24,6 +25,7 @@ const defaultNavbarContext = {
 export const NavbarContext = createContext<NavbarProviderValue>(defaultNavbarContext);
 
 export const NavbarProvider: FC<NavbarProviderProps> = ({ children }) => {
+  const router = useRouter();
   const [color, setColor] = useState<string>(defaultNavbarContext.color);
   const [overlayColor, setOverlayColor] = useState<string>(defaultNavbarContext.overlayColor);
 
@@ -31,6 +33,10 @@ export const NavbarProvider: FC<NavbarProviderProps> = ({ children }) => {
     setColor(defaultNavbarContext.color);
     setOverlayColor(defaultNavbarContext.overlayColor);
   };
+
+  useEffect(() => {
+    resetColor()
+  }, [router])
 
   return (
     <NavbarContext.Provider

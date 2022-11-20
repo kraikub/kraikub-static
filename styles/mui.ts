@@ -1,11 +1,11 @@
 import { createTheme } from "@mui/material";
 
-export const lightTheme = createTheme({
+export const lightThemeGreen = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#3AB96D",
-      contrastText: "white",
+      main: "#10E773",
+      contrastText: "#000000",
     },
     secondary: {
       main: "#ededed",
@@ -18,7 +18,7 @@ export const lightTheme = createTheme({
   },
   typography: {
     fontFamily: `'Inter','Kanit', sans-serif`,
-    fontSize: 16,
+    fontSize: 14,
     h1: {
       fontWeight: 500,
     },
@@ -38,13 +38,11 @@ export const lightTheme = createTheme({
       fontWeight: 500,
     },
     body1: {
-      fontWeight: 300,
-      color: "#000000b0",
+      fontWeight: 400,
     },
     body2: {
       fontWeight: 300,
-      color: "#00000080",
-      fontSize: 14,
+      fontSize: 12,
     },
     button: {
       fontSize: 16,
@@ -67,3 +65,15 @@ export const lightTheme = createTheme({
     }
   },
 });
+
+
+export const lightThemeBlue = createTheme({
+  ...lightThemeGreen,
+  palette: {
+    ...lightThemeGreen,
+    primary: {
+      main: "#2D19A6",
+      contrastText: "#ffffff"
+    }
+  }
+})

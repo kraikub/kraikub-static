@@ -33,7 +33,7 @@ export const TitleBanner: FC = () => {
             บริการจาก Kraikub
           </Typography>
         </Box>
-        <Grid container spacing={2} my={10}>
+        <Grid container spacing={1} my={10}>
           <Grid item xs={12} sm={12} md={6}>
             <a href="#sign-in-with-ku">
               <SimpleFadeIn>
@@ -44,7 +44,7 @@ export const TitleBanner: FC = () => {
                     minHeight: "400px",
                     position: "relative",
                     overflow: "hidden",
-                    borderRadius: "14px",
+                    borderRadius: "4px",
                     backgroundColor: "#f6f6f6",
                   }}
                 >
@@ -131,7 +131,7 @@ export const TitleBanner: FC = () => {
                     minHeight: "400px",
                     position: "relative",
                     overflow: "hidden",
-                    borderRadius: "14px",
+                    borderRadius: "4px",
                     backgroundImage: "url(/kraikub-bg-1b.svg)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",

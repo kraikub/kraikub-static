@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { NextPage } from "next";
 import Head from "next/head";
 import { Footer } from "../../../layouts/Footer";

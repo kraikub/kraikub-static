@@ -16,6 +16,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { TbMenu } from "react-icons/tb";
 import { BsArrowRight } from "react-icons/bs";
 import Head from "next/head";
+import { BlueThemeProvider } from "./BlueThemeProvider";
 interface NavbarLinkProps {
   text: string;
   href: string;
@@ -36,7 +37,7 @@ const links = [
   {
     href: "https://app.kraikub.com",
     text: "Developers Console",
-    chipText: "New",
+    chipText: "NEW",
     chipColor: "#000",
     chipBg: "#ffcfba",
   },
@@ -61,6 +62,7 @@ const NavbarLink: FC<NavbarLinkProps> = ({
                 xs: 18,
                 sm: 12,
               },
+              fontWeight: 500,
               transition: "200ms ease",
               "&:hover": {
                 opacity: 0.8,
@@ -164,17 +166,17 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                   />
                 );
               })}
-              <Button
-                size="small"
-                variant="contained"
-                sx={{
-                  fontSize: 12,
-                  textTransform: "none",
-                  borderRadius: "1000px",
-                }}
-              >
-                Start now
-              </Button>
+              <BlueThemeProvider>
+                <Button
+                  variant="contained"
+                  sx={{
+                    fontSize: 12,
+                    textTransform: "none",
+                  }}
+                >
+                  Soon
+                </Button>
+              </BlueThemeProvider>
             </Stack>
             <IconButton
               sx={{

@@ -42,8 +42,8 @@ export const Footer = () => {
         <Grid my="30px" container rowGap={8}>
           <Grid item xs={12} sm={3}>
             <Stack spacing={1}>
-              <Typography variant="body1" fontSize={12} color="#000">
-                Websites
+              <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
+                WEBSITE
               </Typography>
               <FooterLink text="Home" href="/"/>
               <FooterLink text="Products" href="/products"/>
@@ -52,8 +52,8 @@ export const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={3}>
             <Stack spacing={1}>
-              <Typography variant="body1" fontSize={12} color="#000">
-                Articles
+              <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
+                ARTICLES
               </Typography>
               <FooterLink text="Why Kraikub?" href="/"/>
               <FooterLink text="About us" href="/articles/about-us"/>
@@ -63,8 +63,8 @@ export const Footer = () => {
 
           <Grid item xs={12} sm={3}>
             <Stack spacing={1}>
-              <Typography variant="body1" fontSize={12} color="#000">
-                Services
+              <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
+                SERVICES
               </Typography>
               <FooterLink text="Kraikub ID" href="https://id.kraikub.com"/>
               <FooterLink text="OAuth 2.0" href="https://app.kraikub.com"/>
@@ -72,8 +72,8 @@ export const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={3}>
             <Stack spacing={1}>
-              <Typography variant="body1" fontSize={12} color="#000">
-                Developers
+              <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
+                DEVELOPERS
               </Typography>
               <FooterLink text="OAuth2 Documentation" href="/products"/>
             </Stack>
