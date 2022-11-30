@@ -54,8 +54,8 @@ export const HomePage: NextPage = () => {
               </Typography>
             </Box>
           </Stack>
-          <Typography fontWeight={400} fontSize={14}>
-            STUDENT IDP FOR KASETSART UNIVERSITY
+          <Typography fontWeight={400} fontSize={14} my={2}>
+            Student IDP for Kasetsart University
           </Typography>
           {/* <Button size="small" variant="contained" color="secondary" sx={{
             my: 3,

@@ -92,7 +92,7 @@ export const SigninBanner: FC = () => {
               <Grid container spacing={2} rowGap={2}>
                 <GradientLine />
                 <Grid item xs={6}>
-                  <Typography variant="h6" className="letter-spacing-1">
+                  <Typography variant="h6">
                     Zero registeration
                   </Typography>
                 </Grid>
@@ -104,7 +104,7 @@ export const SigninBanner: FC = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography variant="h6" className="letter-spacing-1">
+                  <Typography variant="h6">
                     Free for any KU developers
                   </Typography>
                 </Grid>
@@ -115,7 +115,7 @@ export const SigninBanner: FC = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography variant="h6" className="letter-spacing-1">
+                  <Typography variant="h6">
                     Kraikub SDK
                   </Typography>
                 </Grid>

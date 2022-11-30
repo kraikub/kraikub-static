@@ -57,15 +57,15 @@ const NavbarLink: FC<NavbarLinkProps> = ({
           <Typography
             sx={{
               color: "inherit",
-              opacity: 0.6,
+              opacity: 0.7,
               fontSize: {
                 xs: 18,
-                sm: 12,
+                sm: 14,
               },
-              fontWeight: 500,
+              fontWeight: 400,
               transition: "200ms ease",
               "&:hover": {
-                opacity: 0.8,
+                opacity: 1,
               },
             }}
           >

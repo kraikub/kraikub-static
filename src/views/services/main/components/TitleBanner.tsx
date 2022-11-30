@@ -24,7 +24,6 @@ export const TitleBanner: FC = () => {
         <Box textAlign="center">
           <Typography
             variant="h5"
-            className="letter-spacing-1"
             fontWeight={500}
           >
             Discover Kraikub services

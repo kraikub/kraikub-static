@@ -17,7 +17,7 @@ export const lightThemeGreen = createTheme({
     borderRadius: 8,
   },
   typography: {
-    fontFamily: `'Inter','Kanit', sans-serif`,
+    fontFamily: `'Poppins','Kanit', sans-serif`,
     fontSize: 14,
     h1: {
       fontWeight: 500,
@@ -41,7 +41,7 @@ export const lightThemeGreen = createTheme({
       fontWeight: 400,
     },
     body2: {
-      fontWeight: 300,
+      fontWeight: 400,
       fontSize: 12,
     },
     button: {

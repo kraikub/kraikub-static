@@ -108,7 +108,7 @@ export const KraikubIDBanner = () => {
             <Grid container spacing={2} rowGap={2}>
               <GradientLine />
               <Grid item xs={6}>
-                <Typography variant="h6" className="letter-spacing-1">
+                <Typography variant="h6">
                   Personal Data Protection
                 </Typography>
               </Grid>
@@ -123,7 +123,7 @@ export const KraikubIDBanner = () => {
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="h6" className="letter-spacing-1">
+                <Typography variant="h6">
                   Push Notification
                 </Typography>
               </Grid>
@@ -140,7 +140,7 @@ export const KraikubIDBanner = () => {
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography variant="h6" className="letter-spacing-1">
+                <Typography variant="h6">
                   2FA
                 </Typography>
               </Grid>

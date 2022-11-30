@@ -36,7 +36,7 @@ export const Footer = () => {
         <Typography variant="h6" fontSize={14}>
           KRAIKUB
         </Typography>
-        <Typography variant="body2" fontSize={12} fontWeight={300}>
+        <Typography variant="body2" fontSize={12} fontWeight={400}>
           Copyright © 2022 Nutchanon Chantrasup. All rights reserved.
         </Typography>
         <Grid my="30px" container rowGap={8}>
