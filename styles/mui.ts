@@ -5,54 +5,61 @@ export const lightThemeGreen = createTheme({
     mode: "light",
     primary: {
       main: "#10E773",
-      contrastText: "#000000",
     },
     secondary: {
-      main: "#ededed",
-      dark: "#c2c2c2",
-      contrastText: "#454545",
+      main: "#00000010",
+      dark: "#00000020",
+      contrastText: "#262626"
     },
+    text: {
+      primary: "#262626",
+      secondary: "#4a4a4a",
+      disabled: "#6a6a6a"
+    },
+    background: {
+      default: "#fbfbfb",
+    }
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 10,
   },
   typography: {
-    fontFamily: `'Poppins','Kanit', sans-serif`,
-    fontSize: 14,
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     h1: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h2: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h3: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h4: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h5: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h6: {
-      fontWeight: 500,
+      fontWeight: 600,
     },
     body1: {
-      fontWeight: 400,
+      fontSize: 18,
+      fontWeight: 500,
     },
     body2: {
-      fontWeight: 400,
-      fontSize: 12,
+      fontWeight: 500,
     },
     button: {
       fontSize: 16,
-      fontWeight: 400,
+      fontWeight: 500,
       textTransform: "none",
     },
   },
   components: {
     MuiButton: {
       defaultProps: {
+        disableRipple: true,
         disableElevation: true,
       },
     },
@@ -65,15 +72,3 @@ export const lightThemeGreen = createTheme({
     }
   },
 });
-
-
-export const lightThemeBlue = createTheme({
-  ...lightThemeGreen,
-  palette: {
-    ...lightThemeGreen,
-    primary: {
-      main: "#2D19A6",
-      contrastText: "#ffffff"
-    }
-  }
-})

@@ -66,8 +66,7 @@ export const Md: FC<MdProps> = ({ content }) => {
       p: (props) => {
         return (
           <Typography variant="body1" sx={{
-            mt: 2,
-            mb: 20,
+            my: 4,
           }}>
             {props.children}
           </Typography>
