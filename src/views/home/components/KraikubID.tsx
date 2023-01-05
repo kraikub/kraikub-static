@@ -75,6 +75,7 @@ export const KraikubID = () => {
               An upgraded Kasetsart University account (Nontri Account).
             </Typography>
           </Box>
+          <a href="https://app.kraikub.com/id">
           <Button
             variant="contained"
             sx={{
@@ -92,9 +93,10 @@ export const KraikubID = () => {
               },
             }}
           >
-            Get your Kraikub ID soon
+            Get your Kraikub ID now
             <IoIosArrowRoundForward size="30px" />
           </Button>
+          </a>
         </Stack>
         <Grid container spacing={4} my={10}>
           {features.map((each, index) => {

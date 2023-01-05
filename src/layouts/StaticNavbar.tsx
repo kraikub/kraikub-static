@@ -116,7 +116,7 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
               </Link>
             </Box>
             <Box>
-              <a href="https://app.kraikub.com/projects/manager">
+              <a href="https://app.kraikub.com/a">
                 <Button
                   color="secondary"
                   sx={{
