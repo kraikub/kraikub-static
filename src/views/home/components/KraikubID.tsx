@@ -1,4 +1,3 @@
-
 import {
   Box,
   Button,
@@ -18,7 +17,8 @@ const features = [
   },
   {
     title: "Two-factor Authentication",
-    description: "Secure your account with Two-factor Authentication. Always receive six digits code which is used for signing your account in.",
+    description:
+      "Secure your account with Two-factor Authentication. Always receive six digits code which is used for signing your account in.",
   },
   {
     title: "Data privacy",
@@ -47,7 +47,11 @@ export const KraikubID = () => {
           "radial-gradient(circle, rgba(234,255,242,1) 0%, rgba(209,255,232,1) 14%, rgba(0,0,0,0) 54%)",
       }}
     >
-      <Container>
+      <Container
+        sx={{
+          minHeight: "100vh",
+        }}
+      >
         <Stack alignItems="center" spacing="60px">
           <Box
             sx={{
@@ -67,38 +71,38 @@ export const KraikubID = () => {
                 },
               }}
             >
-              The next standard for an university account.
+              บัญชีมหาวิทยาลัยรูปแบบใหม่
             </Typography>
           </Box>
           <Box>
             <Typography variant="h6">
-              An upgraded Kasetsart University account (Nontri Account).
+              บัญชีมหาวิทยาลัยเกษตรศาสตร์ (บัญชีนนทรี) เวอร์ชันอัพเกรด
             </Typography>
           </Box>
           <a href="https://app.kraikub.com/id">
-          <Button
-            variant="contained"
-            sx={{
-              height: "80px",
-              px: "30px",
-              gap: 1,
-              fontWeight: 600,
-              fontSize: 18,
-              transition: "300ms ease",
-              letterSpacing: "-0.03em",
-              "&:hover": {
-                transform: "translateY(-10px)",
-                backgroundColor: "#1d6ecc",
-                color: "#fff",
-              },
-            }}
-          >
-            Get your Kraikub ID now
-            <IoIosArrowRoundForward size="30px" />
-          </Button>
+            <Button
+              variant="contained"
+              sx={{
+                height: "80px",
+                px: "30px",
+                gap: 1,
+                fontWeight: 600,
+                fontSize: 18,
+                transition: "300ms ease",
+                letterSpacing: "-0.03em",
+                "&:hover": {
+                  transform: "translateY(-10px)",
+                  backgroundColor: "#1d6ecc",
+                  color: "#fff",
+                },
+              }}
+            >
+              เปิดใช้ Kraikub ID เลย
+              <IoIosArrowRoundForward size="30px" />
+            </Button>
           </a>
         </Stack>
-        <Grid container spacing={4} my={10}>
+        {/* <Grid container spacing={4} my={10}>
           {features.map((each, index) => {
             return (
               <Grid item xs={12} sm={12} md={4} key={`id-feature-${index}`}>
@@ -129,7 +133,7 @@ export const KraikubID = () => {
               </Grid>
             );
           })}
-        </Grid>
+        </Grid> */}
       </Container>
     </Box>
   );

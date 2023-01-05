@@ -112,7 +112,7 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
               cursor: "pointer",
             }}>
               <Link href="/">
-                <img src="/logo-black.png" height={24} />
+                <Typography variant="h6" fontWeight={700}>KRAIKUB</Typography>
               </Link>
             </Box>
             <Box>
