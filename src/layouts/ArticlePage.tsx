@@ -29,19 +29,22 @@ export const ArticlePage: FC<ArticlePageProps> = (props) => {
             md: "sticky",
           },
           top: 0,
-          pt: 5,
-          pb: 3,
+          pt: 3,
+          pb: 1,
           backgroundColor: theme.palette.background.default,
-          boxShadow: "0 10px 10px #00000010"
+          borderStyle: "solid",
+          borderWidth: "0 0 1px 0",
+          borderColor: theme.palette.divider,
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h3" fontWeight={700} letterSpacing={-1}>
+          <Typography variant="h4" fontWeight={500} letterSpacing={-1}>
             {props.metadata.title}
           </Typography>
           <Typography
             sx={{
               my: 1,
+              fontSize: 16
             }}
           >
             By {props.metadata.author}

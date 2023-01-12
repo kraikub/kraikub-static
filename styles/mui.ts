@@ -4,12 +4,10 @@ export const lightThemeGreen = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#10E773",
+      main: "#2a79f7",
     },
     secondary: {
-      main: "#00000010",
-      dark: "#00000020",
-      contrastText: "#262626"
+      main: "#6b6b6b",
     },
     text: {
       primary: "#262626",
@@ -21,10 +19,10 @@ export const lightThemeGreen = createTheme({
     }
   },
   shape: {
-    borderRadius: 10,
+    borderRadius: 8
   },
   typography: {
-    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Sukhumvit", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     h1: {
       fontWeight: 600,
     },

@@ -93,44 +93,72 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
   return (
     <>
       <Box
-        sx={
-          {
-            // backgroundColor: "#2d2d2d",
-          }
-        }
+        sx={{
+          backgroundColor: theme.palette.background.default,
+          position: sticky ? "fixed" : "relative",
+          top: 0,
+          left: 0,
+          right: 0,
+          px: 2,
+          zIndex: theme.zIndex.appBar,
+          borderStyle: "solid",
+          borderWidth: "0 0 1px 0",
+          borderColor: theme.palette.divider,
+          boxShadow: "0 2px 4px #00000020",
+        }}
       >
-        <Container>
+  
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              height: "68px",
+              py: 1,
             }}
           >
-            <Box sx={{
-              cursor: "pointer",
-            }}>
+            <Box
+              sx={{
+                cursor: "pointer",
+              }}
+            >
               <Link href="/">
-                <Typography variant="h6" fontWeight={700}>KRAIKUB</Typography>
+                <Typography
+                  fontSize={18}
+                  fontWeight={700}
+                  letterSpacing="-0.05em"
+                >
+                  KRAIKUB
+                </Typography>
               </Link>
             </Box>
             <Box>
-              <a href="https://app.kraikub.com/a">
-                <Button
-                  color="secondary"
-                  sx={{
-                    color: theme.palette.text.primary,
-                    gap: 1,
-                  }}
-                >
-                  Developer Console
-                  <IoIosArrowRoundForward size="30px" />
-                </Button>
-              </a>
+              <Stack direction="row" spacing={2}>
+                <a href="/articles/introduction">
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    size="large"
+                    sx={{
+                      gap: 1,
+                    }}
+                  >
+                    นี่คืออะไร?
+                  </Button>
+                </a>
+                <a href="https://app.kraikub.com/a">
+                  <Button
+                    variant="contained"
+                    size="large"
+                    sx={{
+                      gap: 1,
+                    }}
+                  >
+                    ไปที่ Kraikub ID
+                  </Button>
+                </a>
+              </Stack>
             </Box>
           </Box>
-        </Container>
       </Box>
     </>
   );

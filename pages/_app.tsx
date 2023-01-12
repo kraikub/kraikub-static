@@ -1,4 +1,5 @@
 import "../styles/css/globals.css";
+import "../public/fonts/styles.css";
 import "animate.css/animate.min.css";
 import type { AppProps } from "next/app";
 import { CssBaseline, ThemeProvider } from "@mui/material";

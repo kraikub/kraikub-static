@@ -8,6 +8,8 @@ import {
   useTheme,
 } from "@mui/material";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { SimpleFadeIn } from "../../../components/animations/SimpleFadeIn";
+import { SimepleCard } from "../../../components/card/SimpleCard";
 
 const features = [
   {
@@ -42,9 +44,7 @@ export const KraikubID = () => {
   return (
     <Box
       sx={{
-        py: "80px",
-        background:
-          "radial-gradient(circle, rgba(234,255,242,1) 0%, rgba(209,255,232,1) 14%, rgba(0,0,0,0) 54%)",
+        py: "30vh",
       }}
     >
       <Container
@@ -52,88 +52,175 @@ export const KraikubID = () => {
           minHeight: "100vh",
         }}
       >
-        <Stack alignItems="center" spacing="60px">
-          <Box
-            sx={{
-              maxWidth: "800px",
-              textAlign: "center",
-            }}
-          >
-            <Typography
-              variant="h2"
-              fontWeight={700}
-              letterSpacing="-2px"
-              sx={{
-                fontSize: {
-                  xs: "60px",
-                  sm: "2.2em",
-                  md: "5.1em",
-                },
-              }}
-            >
-              บัญชีมหาวิทยาลัยรูปแบบใหม่
-            </Typography>
-          </Box>
-          <Box>
-            <Typography variant="h6">
-              บัญชีมหาวิทยาลัยเกษตรศาสตร์ (บัญชีนนทรี) เวอร์ชันอัพเกรด
-            </Typography>
-          </Box>
-          <a href="https://app.kraikub.com/id">
-            <Button
-              variant="contained"
-              sx={{
-                height: "80px",
-                px: "30px",
-                gap: 1,
-                fontWeight: 600,
-                fontSize: 18,
-                transition: "300ms ease",
-                letterSpacing: "-0.03em",
-                "&:hover": {
-                  transform: "translateY(-10px)",
-                  backgroundColor: "#1d6ecc",
-                  color: "#fff",
-                },
-              }}
-            >
-              เปิดใช้ Kraikub ID เลย
-              <IoIosArrowRoundForward size="30px" />
-            </Button>
-          </a>
-        </Stack>
-        {/* <Grid container spacing={4} my={10}>
-          {features.map((each, index) => {
-            return (
-              <Grid item xs={12} sm={12} md={4} key={`id-feature-${index}`}>
-                <Box
+        <Box>
+          <Stack alignItems="start" spacing="60px">
+            <Grid container sx={{ width: "100%", rowGap: "40px" }}>
+              <Grid item xs={12} sm={12} md={5} lg={5}>
+                <Typography
+                  variant="h2"
+                  fontWeight={700}
+                  letterSpacing="-2px"
                   sx={{
-                    height: "400px",
-                    padding: "20px",
-                    borderRadius: "16px",
+                    fontSize: {
+                      xs: "60px",
+                      sm: "3.2em",
+                    },
                   }}
                 >
-                  <Box sx={{}}>
-                    <Typography
-                      variant="h4"
-                      fontWeight={700}
-                      letterSpacing="-0.02em"
-                    >
-                      {each.title}
-                    </Typography>
-                  </Box>
-                  <Typography
-                    mt={4}
-                    variant="body1"
-                    color={theme.palette.text.secondary}
-                  >
-                    {each.description}
+                  บัญชีมหาวิทยาลัยเกษตรศาสตร์
+                </Typography>
+                <Box my={4}>
+                  <Typography variant="body1">
+                    บัญชีมหาวิทยาลัยเกษตรศาสตร์ (บัญชีนนทรี)
+                    เวอร์ชันอัพเกรดที่จะทำให้คุณสามารถนำบัญชีมหาวิทยาลัยของคุณไปใช้ประโยชน์กับเว็บไซต์อื่นๆได้อย่างง่ายดาย
                   </Typography>
                 </Box>
+                <Stack
+                  direction="row"
+                  spacing={{
+                    xs: 0,
+                    sm: 1,
+                  }}
+                  rowGap={1}
+                  flexWrap="wrap"
+                >
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "auto",
+                      },
+                    }}
+                  >
+                    <a
+                      href="https://app.kraikub.com/id"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      <Button
+                        variant="contained"
+                        size="large"
+                        sx={{
+                          width: {
+                            xs: "100%",
+                            sm: "100%",
+                            md: "auto",
+                          },
+                          gap: 1,
+                          fontWeight: 600,
+                          fontSize: 18,
+                          transition: "300ms ease",
+                          letterSpacing: "-0.03em",
+                        }}
+                      >
+                        ลองใช้ Kraikub ID เลย
+                        <IoIosArrowRoundForward size="30px" />
+                      </Button>
+                    </a>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: {
+                        xs: "100%",
+                        sm: "auto",
+                      },
+                    }}
+                  >
+                    <a
+                      href="https://app.kraikub.com/signup"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      <Button
+                        color="secondary"
+                        variant="outlined"
+                        size="large"
+                        sx={{
+                          width: {
+                            xs: "100%",
+                            sm: "100%",
+                            md: "auto",
+                          },
+                          gap: 1,
+                          fontWeight: 600,
+                          fontSize: 18,
+                          transition: "300ms ease",
+                          letterSpacing: "-0.03em",
+                        }}
+                      >
+                        สมัครในนามบุคคลภายนอก
+                      </Button>
+                    </a>
+                  </Box>
+                </Stack>
               </Grid>
-            );
-          })}
-        </Grid> */}
+              <Grid item xs={12} sm={12} md={7} lg={7} textAlign="center">
+                <img
+                  src="/home-image-1.png"
+                  width="100%"
+                  style={{
+                    maxWidth: "800px",
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </Stack>
+        </Box>
+        <Stack my="200px" spacing="100px">
+          <SimpleFadeIn>
+            <SimepleCard
+              sx={{
+                p: {
+                  xs: "12px",
+                  sm: "18px",
+                  md: "30px",
+                },
+                borderRadius: {
+                  xs: "8px",
+                  sm: "18px",
+                  md: "26px",
+                },
+              }}
+            >
+              <Stack spacing={4}>
+                <Typography variant="h4">ใช้ได้ทุกที่บนอินเตอร์เน็ต</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.7 }} fontSize={20}>
+                  ด้วย Kraikub ID
+                  คุณสามารถนำบัญชีมหาวิทยาลัยเกษตรศาสตร์ของคุณไปใช้งานบนเว็บไซต์อื่นๆที่รองรับได้ทันที
+                  ด้วยมาตรฐาน OAuth 2.0 และ OpenID Connect
+                </Typography>
+                <img src="/sign-in-with-ku.png" />
+              </Stack>
+            </SimepleCard>
+          </SimpleFadeIn>
+          <SimpleFadeIn>
+            <SimepleCard
+              sx={{
+                p: {
+                  xs: "12px",
+                  sm: "18px",
+                  md: "30px",
+                },
+                borderRadius: {
+                  xs: "8px",
+                  sm: "18px",
+                  md: "26px",
+                },
+              }}
+            >
+              <Stack spacing={4}>
+                <Typography variant="h4">ปลอดภัย เกินกว่าใคร</Typography>
+                <Typography variant="body1" sx={{ opacity: 0.7 }} fontSize={20}>
+                  ด้วยระบบการยืนยันตัวตนสองชั้น (Two-factor Authentication)
+                  ทำให้การใช้งานบัญชีของคุณปลอดภัยจากผู้ที่ไม่ประสงค์ดี
+                </Typography>
+                <img src="/2fa.png" />
+              </Stack>
+            </SimepleCard>
+          </SimpleFadeIn>
+        </Stack>
       </Container>
     </Box>
   );
