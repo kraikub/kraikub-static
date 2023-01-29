@@ -42,185 +42,224 @@ const features = [
 export const KraikubID = () => {
   const theme = useTheme();
   return (
-    <Box
-      sx={{
-        py: "30vh",
-      }}
-    >
+    <Box>
+      <Box
+        sx={{
+          backgroundColor: "#000000",
+          color: "#ffffff",
+          pt: "14vh",
+        }}
+      >
+        <Container
+          sx={{
+            minHeight: "100vh",
+            py: "10vh",
+          }}
+        >
+          <Stack alignItems="center" spacing={4}>
+            <Typography variant="h2">เข้าสู่ระบบเว็บไซต์ไหนก็ได้</Typography>
+            <Typography variant="h4">
+              ด้วยบัญชี
+              <Typography
+                display="inline"
+                color="#35bda4"
+                fontSize="inherit"
+                fontWeight="inherit"
+              >
+                มหาวิทยาลัยเกษตรศาสตร์
+              </Typography>
+            </Typography>
+          </Stack>
+          <Stack alignItems="center" spacing={4} my="120px">
+            <Box width="100%" maxWidth="500px">
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "80px",
+                  px: "30px",
+                  py: "10px",
+                  backgroundColor: "#ffffff",
+                  color: "#000000",
+                  borderRadius: "10px",
+                  boxShadow: "0 0 40px #35bda4c0",
+                }}
+              >
+                Sign in with Kasetsart
+              </Box>
+              <Typography
+                mt={4}
+                sx={{
+                  opacity: 0.8,
+                }}
+              >
+                ด้วยระบบ Sign in with Kasetsart
+                สามารถทำให้คุณนำบัญชีมหาวิทยาลัยเกษตรศาสตร์ไปใช้งานบนเว็บไซต์หรือแอปพลิเคชันต่างๆได้โดยไม่ต้องสมัครใช้งานใหม่
+                หากคุณเจอปุ่มนี้อยู่บนเว็บไซต์ใดๆก็ตาม คุณสามารถใช้งานได้ทันที!
+              </Typography>
+            </Box>
+          </Stack>
+        </Container>
+      </Box>
       <Container
         sx={{
+          py: "10vh",
           minHeight: "100vh",
         }}
       >
         <Box>
-          <Stack alignItems="start" spacing="60px">
-            <Grid container sx={{ width: "100%", rowGap: "40px" }}>
-              <Grid item xs={12} sm={12} md={5} lg={5}>
+          <Stack alignItems="start" spacing="30vh">
+            <Box>
+              <Typography
+                variant="h2"
+                fontWeight={600}
+                letterSpacing="-2px"
+                sx={{
+                  fontSize: {
+                    xs: "60px",
+                    sm: "3.2em",
+                  },
+                }}
+              >
+                เป็นนิสิตมหาวิทยาลัยเกษตรศาสตร์ใช่หรือไม่?
+              </Typography>
+              <Box my={4}>
                 <Typography
-                  variant="h2"
-                  fontWeight={700}
-                  letterSpacing="-2px"
+                  variant="body1"
                   sx={{
-                    fontSize: {
-                      xs: "60px",
-                      sm: "3.2em",
+                    opacity: 0.8,
+                  }}
+                >
+                  เริ่มต้นใช้งาน Kraikub ได้ทันทีด้วย Username และ Password
+                  ของบัญชีมหาวิทยาลัยเกษตรศาสตร์
+                </Typography>
+              </Box>
+              <Stack
+                direction={{
+                  xs: "column",
+                  sm: "row",
+                }}
+                alignItems="center"
+                spacing={{
+                  xs: 0,
+                  sm: 2,
+                }}
+                rowGap={1}
+                flexWrap="wrap"
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "100%",
+                      sm: "auto",
                     },
                   }}
                 >
-                  บัญชีมหาวิทยาลัยเกษตรศาสตร์
-                </Typography>
-                <Box my={4}>
-                  <Typography variant="body1">
-                    บัญชีมหาวิทยาลัยเกษตรศาสตร์ (บัญชีนนทรี)
-                    เวอร์ชันอัพเกรดที่จะทำให้คุณสามารถนำบัญชีมหาวิทยาลัยของคุณไปใช้ประโยชน์กับเว็บไซต์อื่นๆได้อย่างง่ายดาย
-                  </Typography>
+                  <a
+                    href="https://app.kraikub.com/id"
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      size="large"
+                      sx={{
+                        width: {
+                          xs: "100%",
+                          sm: "100%",
+                          md: "auto",
+                        },
+                        gap: 1,
+                        fontWeight: 600,
+                        fontSize: 18,
+                        transition: "300ms ease",
+                        letterSpacing: "-0.03em",
+                      }}
+                    >
+                      ลองใช้ Kraikub ID เลย
+                      <IoIosArrowRoundForward size="30px" />
+                    </Button>
+                  </a>
                 </Box>
-                <Stack
-                  direction="row"
-                  spacing={{
-                    xs: 0,
-                    sm: 1,
+                <Typography>หรือ</Typography>
+                <Box
+                  sx={{
+                    width: {
+                      xs: "100%",
+                      sm: "auto",
+                    },
                   }}
-                  rowGap={1}
-                  flexWrap="wrap"
                 >
-                  <Box
-                    sx={{
-                      width: {
-                        xs: "100%",
-                        sm: "auto",
-                      },
+                  <a
+                    href="https://app.kraikub.com/signup"
+                    style={{
+                      width: "100%",
                     }}
                   >
-                    <a
-                      href="https://app.kraikub.com/id"
-                      style={{
-                        width: "100%",
+                    <Button
+                      color="secondary"
+                      variant="outlined"
+                      size="large"
+                      sx={{
+                        width: {
+                          xs: "100%",
+                          sm: "100%",
+                          md: "auto",
+                        },
+                        gap: 1,
+                        fontWeight: 600,
+                        fontSize: 18,
+                        transition: "300ms ease",
+                        letterSpacing: "-0.03em",
                       }}
                     >
-                      <Button
-                        variant="contained"
-                        size="large"
-                        sx={{
-                          width: {
-                            xs: "100%",
-                            sm: "100%",
-                            md: "auto",
-                          },
-                          gap: 1,
-                          fontWeight: 600,
-                          fontSize: 18,
-                          transition: "300ms ease",
-                          letterSpacing: "-0.03em",
-                        }}
-                      >
-                        ลองใช้ Kraikub ID เลย
-                        <IoIosArrowRoundForward size="30px" />
-                      </Button>
-                    </a>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: {
-                        xs: "100%",
-                        sm: "auto",
-                      },
-                    }}
-                  >
-                    <a
-                      href="https://app.kraikub.com/signup"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      <Button
-                        color="secondary"
-                        variant="outlined"
-                        size="large"
-                        sx={{
-                          width: {
-                            xs: "100%",
-                            sm: "100%",
-                            md: "auto",
-                          },
-                          gap: 1,
-                          fontWeight: 600,
-                          fontSize: 18,
-                          transition: "300ms ease",
-                          letterSpacing: "-0.03em",
-                        }}
-                      >
-                        สมัครในนามบุคคลภายนอก
-                      </Button>
-                    </a>
-                  </Box>
-                </Stack>
-              </Grid>
-              <Grid item xs={12} sm={12} md={7} lg={7} textAlign="center">
-                <img
-                  src="/home-image-1.png"
-                  width="100%"
-                  style={{
-                    maxWidth: "800px",
+                      สมัครในนามบุคคลภายนอก
+                    </Button>
+                  </a>
+                </Box>
+              </Stack>
+            </Box>
+            <Box>
+              <Typography
+                variant="h2"
+                letterSpacing="-2px"
+                sx={{
+                  fontSize: {
+                    xs: "60px",
+                    sm: "3.2em",
+                  },
+                }}
+                fontWeight={600}
+              >
+                สำหรับนักพัฒนา (Developers)
+              </Typography>
+              <Box my={4}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    opacity: 0.8,
                   }}
-                />
-              </Grid>
-            </Grid>
+                >
+                  เรียนรู้วิธีการเชื่อมต่อแอปพลิเคชันของคุณกับระบบยืนยันตัวตนของ
+                  Kraikub เพื่อให้ผู้ใช้งานของคุณสามารถใช้งาน Sign in with
+                  Kasetsart ด้วยมาตรฐาน OAuth 2.0 และ OpenID Connect
+                </Typography>
+                <Button
+                  size="large"
+                  variant="contained"
+                  sx={{
+                    mt: 2,
+                  }}
+                >
+                  เรียนรู้ได้ที่นี่
+                </Button>
+              </Box>
+            </Box>
           </Stack>
         </Box>
-        <Stack my="200px" spacing="100px">
-          <SimpleFadeIn>
-            <SimepleCard
-              sx={{
-                p: {
-                  xs: "12px",
-                  sm: "18px",
-                  md: "30px",
-                },
-                borderRadius: {
-                  xs: "8px",
-                  sm: "18px",
-                  md: "26px",
-                },
-              }}
-            >
-              <Stack spacing={4}>
-                <Typography variant="h4">ใช้ได้ทุกที่บนอินเตอร์เน็ต</Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }} fontSize={20}>
-                  ด้วย Kraikub ID
-                  คุณสามารถนำบัญชีมหาวิทยาลัยเกษตรศาสตร์ของคุณไปใช้งานบนเว็บไซต์อื่นๆที่รองรับได้ทันที
-                  ด้วยมาตรฐาน OAuth 2.0 และ OpenID Connect
-                </Typography>
-                <img src="/sign-in-with-ku.png" />
-              </Stack>
-            </SimepleCard>
-          </SimpleFadeIn>
-          <SimpleFadeIn>
-            <SimepleCard
-              sx={{
-                p: {
-                  xs: "12px",
-                  sm: "18px",
-                  md: "30px",
-                },
-                borderRadius: {
-                  xs: "8px",
-                  sm: "18px",
-                  md: "26px",
-                },
-              }}
-            >
-              <Stack spacing={4}>
-                <Typography variant="h4">ปลอดภัย เกินกว่าใคร</Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }} fontSize={20}>
-                  ด้วยระบบการยืนยันตัวตนสองชั้น (Two-factor Authentication)
-                  ทำให้การใช้งานบัญชีของคุณปลอดภัยจากผู้ที่ไม่ประสงค์ดี
-                </Typography>
-                <img src="/2fa.png" />
-              </Stack>
-            </SimepleCard>
-          </SimpleFadeIn>
-        </Stack>
       </Container>
     </Box>
   );

@@ -127,24 +127,12 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                   fontWeight={700}
                   letterSpacing="-0.05em"
                 >
-                  KRAIKUB
+                  <img src="/static/logo/transparent/kraikub-logo-256.png" height="34px"/>
                 </Typography>
               </Link>
             </Box>
             <Box>
               <Stack direction="row" spacing={2}>
-                <a href="/articles/introduction">
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    size="large"
-                    sx={{
-                      gap: 1,
-                    }}
-                  >
-                    นี่คืออะไร?
-                  </Button>
-                </a>
                 <a href="https://app.kraikub.com/a">
                   <Button
                     variant="contained"
