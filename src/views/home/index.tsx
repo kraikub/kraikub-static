@@ -1,12 +1,12 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { FC } from "react";
-import { KraikubID } from "./components/KraikubID";
-import { Top } from "./components/Top";
+import Features from "./components/Features";
+import Introduce from "./components/Introduce";
 
 export const HomePage: FC = () => {
   return (
     <>
-      <KraikubID />
+      <Introduce />
+      {/* <Features /> */}
     </>
   );
 };

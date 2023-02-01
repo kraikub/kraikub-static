@@ -4,13 +4,15 @@ export const lightThemeGreen = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#000000",
+      main: "#35bda4",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#00000010",
+      contrastText: "#000000A0",
     },
     info: {
       main: "#1E34FE",
-    },
-    secondary: {
-      main: "#6b6b6b",
     },
     text: {
       primary: "#262626",
@@ -25,31 +27,38 @@ export const lightThemeGreen = createTheme({
     borderRadius: 8
   },
   typography: {
-    fontFamily: `-apple-system, BlinkMacSystemFont, "Sukhumvit", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    fontFamily: `'Inter', sans-serif`,
     h1: {
       fontWeight: 600,
+      fontFamily: `'Inter Tight', sans-serif`,
     },
     h2: {
       fontWeight: 600,
+      fontFamily: `'Inter Tight', sans-serif`,
     },
     h3: {
       fontWeight: 600,
+      fontFamily: `'Inter Tight', sans-serif`,
     },
     h4: {
       fontWeight: 600,
+      fontFamily: `'Inter Tight', sans-serif`,
     },
     h5: {
       fontWeight: 600,
+      fontFamily: `'Inter', sans-serif`,
     },
     h6: {
       fontWeight: 600,
+      fontFamily: `'Inter', sans-serif`,
     },
     body1: {
-      fontSize: 18,
-      fontWeight: 500,
+      fontSize: 16,
+      fontWeight: 400,
     },
     body2: {
-      fontWeight: 500,
+      fontWeight: 400,
+      opacity: 0.6,
     },
     button: {
       fontSize: 16,
@@ -65,10 +74,10 @@ export const lightThemeGreen = createTheme({
       },
     },
     MuiLink: {
+      defaultProps: {
+        color: "secondary",
+      },
       styleOverrides: {
-        root: {
-          textDecoration: "none",
-        }
       }
     }
   },

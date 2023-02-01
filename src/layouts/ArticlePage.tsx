@@ -38,13 +38,12 @@ export const ArticlePage: FC<ArticlePageProps> = (props) => {
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h4" fontWeight={500} letterSpacing={-1}>
+          <Typography variant="h6" fontWeight={500} letterSpacing={-1}>
             {props.metadata.title}
           </Typography>
           <Typography
             sx={{
-              my: 1,
-              fontSize: 16
+              fontSize: 14
             }}
           >
             By {props.metadata.author}
@@ -55,14 +54,13 @@ export const ArticlePage: FC<ArticlePageProps> = (props) => {
       <Container
         maxWidth="md"
         sx={{
-          pt: "50px",
           pb: "120px",
           minHeight: "100vh",
         }}
       >
         <Box
           sx={{
-            py: "80px",
+            py: "40px",
           }}
         >
           <Md content={props.content} />

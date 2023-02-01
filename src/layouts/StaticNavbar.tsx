@@ -104,7 +104,6 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           borderStyle: "solid",
           borderWidth: "0 0 1px 0",
           borderColor: theme.palette.divider,
-          boxShadow: "0 2px 4px #00000020",
         }}
       >
   
@@ -125,9 +124,10 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
                 <Typography
                   fontSize={18}
                   fontWeight={700}
-                  letterSpacing="-0.05em"
+                  letterSpacing="-0.03em"
                 >
-                  <img src="/static/logo/transparent/kraikub-logo-256.png" height="34px"/>
+                  {/* <img src="/static/logo/transparent/kraikub-logo-256.png" height="34px"/> */}
+                  KRAIKUB
                 </Typography>
               </Link>
             </Box>
