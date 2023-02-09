@@ -71,6 +71,8 @@ export default function Introduce() {
               ยืนยันตัวตนนิสิตมหาวิทยาลัยเกษตรศาสตร์ด้วยมาตารฐาน OpenID Connect
               เพื่อรองรับนิสิตเกษตรศาสตร์บนเว็บไซต์และแอปพลิเคชันของคุณ
             </Typography>
+            <Link href="https://app.kraikub.com">
+            <a>
             <Box>
               <Button
                 size="large"
@@ -84,6 +86,8 @@ export default function Introduce() {
                 นิสิตเกษตรใช้งานได้ทันที <IoIosArrowRoundForward />
               </Button>
             </Box>
+            </a>
+            </Link>
           </Stack>
         </Grid>
         <Grid item xs={12} sm={6}>

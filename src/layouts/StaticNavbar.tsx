@@ -24,6 +24,7 @@ interface NavbarLinkProps {
 
 interface StaticNavbarProps {
   sticky?: boolean;
+  disableBorder?: boolean;
 }
 
 const links = [
@@ -85,11 +86,11 @@ const NavbarLink: FC<NavbarLinkProps> = ({
   );
 };
 
-export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
-  const { color, overlayColor } = useNavbarControl();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export const StaticNavbar: FC<StaticNavbarProps> = ({
+  sticky,
+  disableBorder,
+}) => {
   const theme = useTheme();
-
   return (
     <>
       <Box
@@ -101,52 +102,51 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({ sticky }) => {
           right: 0,
           px: 2,
           zIndex: theme.zIndex.appBar,
-          borderStyle: "solid",
+          borderStyle: disableBorder ? "none" : "solid",
           borderWidth: "0 0 1px 0",
           borderColor: theme.palette.divider,
         }}
       >
-  
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            py: 1,
+          }}
+        >
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              py: 1,
+              cursor: "pointer",
             }}
           >
-            <Box
-              sx={{
-                cursor: "pointer",
-              }}
-            >
-              <Link href="/">
-                <Typography
-                  fontSize={18}
-                  fontWeight={700}
-                  letterSpacing="-0.03em"
-                >
-                  {/* <img src="/static/logo/transparent/kraikub-logo-256.png" height="34px"/> */}
-                  KRAIKUB
-                </Typography>
-              </Link>
-            </Box>
-            <Box>
-              <Stack direction="row" spacing={2}>
-                <a href="https://app.kraikub.com/a">
-                  <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                      gap: 1,
-                    }}
-                  >
-                    ไปที่ Kraikub ID
-                  </Button>
-                </a>
-              </Stack>
-            </Box>
+            <Link href="/">
+              <Typography
+                fontSize={18}
+                fontWeight={700}
+                letterSpacing="-0.03em"
+              >
+                {/* <img src="/static/logo/transparent/kraikub-logo-256.png" height="34px"/> */}
+                KRAIKUB
+              </Typography>
+            </Link>
           </Box>
+          <Box>
+            <Stack direction="row" spacing={2}>
+              <a href="https://app.kraikub.com/a">
+                <Button
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    gap: 1,
+                  }}
+                >
+                  ไปที่ Kraikub ID
+                </Button>
+              </a>
+            </Stack>
+          </Box>
+        </Box>
       </Box>
     </>
   );
