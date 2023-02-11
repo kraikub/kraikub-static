@@ -133,7 +133,7 @@ export const StaticNavbar: FC<StaticNavbarProps> = ({
           </Box>
           <Box>
             <Stack direction="row" spacing={2}>
-              <a href="https://app.kraikub.com/a">
+              <a href="https://app.kraikub.com">
                 <Button
                   variant="contained"
                   size="large"

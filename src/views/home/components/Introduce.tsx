@@ -135,7 +135,7 @@ export default function Introduce() {
         </Box>
       </Box>
 
-      <Box my="200px">
+      <Box my="100px">
         <Stack spacing={2}>
           <Typography variant="h4">ใช้งานง่าย พัฒนาก็ง่าย</Typography>
           <Typography variant="body1" fontSize={18}>

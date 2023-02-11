@@ -55,7 +55,6 @@ export const Footer = () => {
               <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
                 ARTICLES
               </Typography>
-              <FooterLink text="Why Kraikub?" href="/"/>
               <FooterLink text="About us" href="/articles/about-us"/>
               <FooterLink text="Privacy Policy" href="/products"/>
             </Stack>
@@ -66,8 +65,7 @@ export const Footer = () => {
               <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
                 SERVICES
               </Typography>
-              <FooterLink text="Kraikub ID" href="https://id.kraikub.com"/>
-              <FooterLink text="OAuth 2.0" href="https://app.kraikub.com"/>
+              <FooterLink text="Kraikub ID" href="https://app.kraikub.com"/>
             </Stack>
           </Grid>
           <Grid item xs={12} sm={3}>
@@ -75,7 +73,7 @@ export const Footer = () => {
               <Typography variant="body1" fontSize={12} color="#000" fontWeight={600}>
                 DEVELOPERS
               </Typography>
-              <FooterLink text="OAuth2 Documentation" href="/products"/>
+              <FooterLink text="OAuth2 Documentation" href="https://github.com/kraikub/docs"/>
             </Stack>
           </Grid>
         </Grid>
